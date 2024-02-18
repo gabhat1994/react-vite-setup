@@ -1,0 +1,62 @@
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  z-index:-1;
+}
+
+.fadeInEffect {
+  animation: fadeIn 0.8s linear forwards;
+}
+
+.fadeOutEffect {
+  animation: fadeOut 0.8s linear forwards;
+}
+
+@media (max-width: 1440px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

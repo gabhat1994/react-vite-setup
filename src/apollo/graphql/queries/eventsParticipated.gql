@@ -1,0 +1,25 @@
+query EventsParticipated($chamberId: ID!) {
+  hosted: getEvents(
+    chamberId: $chamberId
+    filter: { eventFilter: HOSTING }
+    limit: 10
+    offset: 0
+    sortOrder: ASC
+  ) {
+    data {
+      ...ParticipatedEvent
+    }
+  }
+
+  attending: getEvents(
+    chamberId: $chamberId
+    filter: { eventFilter: ATTENDING }
+    limit: 10
+    offset: 0
+    sortOrder: ASC
+  ) {
+    data {
+      ...ParticipatedEvent
+    }
+  }
+}

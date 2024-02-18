@@ -1,0 +1,6 @@
+query getPaymentProviderCharges($query: PaymentProviderChargesInput!) {
+  getPaymentProviderCharges(query: $query) {
+    charges
+    netAmount
+  }
+}

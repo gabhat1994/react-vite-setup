@@ -1,0 +1,35 @@
+query getQuestionsForSpace(
+  $spaceId: ID!
+  $filter: QuestionsFilter
+  $sort: SortType
+  $limit: Int
+  $offset: Int
+) {
+  getQuestionsForSpace(
+    spaceId: $spaceId
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...NoumQuestionOutput
+    }
+  }
+  tipped: getQuestionsForSpace(filter: { status: TIPPED }, spaceId: $spaceId) {
+    count
+  }
+  answered: getQuestionsForSpace(
+    filter: { status: ANSWERED }
+    spaceId: $spaceId
+  ) {
+    count
+  }
+  close: getQuestionsForSpace(filter: { status: CLOSED }, spaceId: $spaceId) {
+    count
+  }
+  open: getQuestionsForSpace(filter: { status: ACTIVE }, spaceId: $spaceId) {
+    count
+  }
+}

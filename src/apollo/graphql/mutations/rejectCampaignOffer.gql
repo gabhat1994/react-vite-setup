@@ -1,0 +1,5 @@
+mutation rejectCampaignOffer($offerId: String!, $reason: String) {
+  rejectAdCampaignOffer(offerId: $offerId, reason: $reason) {
+    success
+  }
+}

@@ -1,0 +1,7 @@
+mutation addCookieConsent($input: CookieConsentInput!) {
+  addCookieConsent(input: $input) {
+    cookieConsentId
+    cookieConsent
+    createdAt
+  }
+}

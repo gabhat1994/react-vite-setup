@@ -1,0 +1,7 @@
+mutation submitCQForm($input: CQFormInput) {
+  capitalquotient {
+    submitCQForm(input: $input) {
+      ...CQFormOutput
+    }
+  }
+}

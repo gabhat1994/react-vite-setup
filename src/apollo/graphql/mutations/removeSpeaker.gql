@@ -1,0 +1,6 @@
+mutation removeSpeaker($groupId: ID!, $speakerId: ID!) {
+  removeSpeaker(groupId: $groupId, speakerId: $speakerId) {
+    _id
+    speakers
+  }
+}

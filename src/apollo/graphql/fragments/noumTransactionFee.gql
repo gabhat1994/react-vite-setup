@@ -1,0 +1,24 @@
+fragment NoumSetupCounter on SubscriptionOutput {
+  subscription_id
+  counters {
+    noumSetup {
+      current
+    }
+  }
+}
+
+fragment NoumTransaction on NoumTransactionFee {
+  valid_till
+  noum_transaction_fee_id
+  subscription_id {
+    ...NoumSetupCounter
+  }
+  is_publishable
+  status
+  chamber_id {
+    _id
+    type
+    name
+    profileImage
+  }
+}

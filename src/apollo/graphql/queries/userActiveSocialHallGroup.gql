@@ -1,0 +1,5 @@
+query userActiveSocialHallGroup($socialHallId: ID) {
+  userActiveSocialHallGroup(socialHallId: $socialHallId) {
+    ...SocialHallGroup
+  }
+}

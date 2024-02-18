@@ -1,0 +1,54 @@
+fragment QuestionAnswerUser on UserOutput {
+  _id
+  firstName
+  middleName
+  lastName
+  profile {
+    profilePictureThumbnail
+    profilePicture
+  }
+  chamber {
+    _id
+    userId
+  }
+  userStatus
+}
+
+fragment TipOutput on TipOutput {
+  amount
+  tipBy {
+    ...QuestionAnswerUser
+  }
+}
+
+fragment AnswerOutput on AnswerOutput {
+  _id
+  user {
+    ...QuestionAnswerUser
+  }
+  body
+  spaceId
+  tipDetails {
+    ...TipOutput
+  }
+  createdAt
+  updatedAt
+}
+
+fragment NoumQuestionOutput on NoumQuestionOutput {
+  _id
+  body
+  questionImage
+  expiryDate
+  user {
+    ...QuestionAnswerUser
+  }
+  spaceId {
+    _id
+  }
+  createdAt
+  updatedAt
+  answers {
+    ...AnswerOutput
+  }
+}

@@ -1,0 +1,5 @@
+query planSettings($forPurchase: Boolean!) {
+  getAllPlansDetails(forPurchase: $forPurchase)  {
+    ...PlanSetting
+  }
+}

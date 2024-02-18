@@ -1,0 +1,76 @@
+fragment SettingItem on PlanSettingItemOutput {
+  id
+  label
+  action
+  resource
+  resourceType
+  control
+}
+
+fragment NoumOptions on PlanSettingNoumOptionsOutput {
+  id
+  label
+  action
+  resource
+  resourceType
+  control
+  settings {
+    value
+    type
+  }
+}
+
+fragment NoumSetting on PlanSettingNoumOutput {
+  limits {
+    ...NoumOptions
+  }
+  tools {
+    ...NoumOptions
+  }
+}
+
+fragment PlanSettingBasic on PlanSettingOutput {
+  item_id
+  enabled
+  spotlight
+  plan_name
+  description
+  sort_index
+  category
+  plan_setting_id
+}
+
+fragment PlanItemBasic on PlanItem {
+  plan_id
+  name
+  external_name
+  currency_code
+  description
+  status
+  price
+  period_unit
+  plan_name_id
+  trial_period
+  plan_details {
+    discount_percent
+  }
+}
+
+fragment PlanSetting on PlanSettingOutput {
+  ...PlanSettingBasic
+  menuItems {
+    ...SettingItem
+  }
+  noumSetting {
+    ...NoumSetting
+  }
+  financialProducts {
+    ...SettingItem
+  }
+  learningProducts {
+    ...SettingItem
+  }
+  plans {
+    ...PlanItemBasic
+  }
+}

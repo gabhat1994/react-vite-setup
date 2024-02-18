@@ -1,0 +1,37 @@
+query userFavourites($offset: Int, $limit: Int) {
+  userFavourites(offset: $offset, limit: $limit) {
+    data {
+      _id
+      order
+      favouritedAt
+      noum {
+        _id
+        name
+        title
+        type
+        projectType
+        description
+        profileImage
+        followersCount
+        isFavourited
+        status
+        uid {
+          _id
+          firstName
+          lastName
+          title
+          userStatus
+          location
+          profile {
+            profilePicture
+          }
+        }
+        category {
+          _id
+          name
+        }
+      }
+    }
+    count
+  }
+}

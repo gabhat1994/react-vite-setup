@@ -1,0 +1,3 @@
+mutation SendSOWForSigning($id: ID!) {
+  sendDocumentForSigning(documentId: $id, type: SOW)
+}

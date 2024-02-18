@@ -1,0 +1,57 @@
+query receivedConnectionRequest(
+  $status: ConnectionRequestStatus
+  $limit: Int
+  $offset: Int
+  $spaceId: ID
+) {
+  receivedConnectionRequest(
+    status: $status
+    limit: $limit
+    offset: $offset
+    spaceId: $spaceId
+  ) {
+    data {
+      _id
+      status
+      message
+      requestedAt
+      requestTo {
+        _id
+        name
+        title
+        type
+        profileImage
+        category {
+          _id
+          name
+        }
+      }
+      requestFrom {
+        _id
+        title
+        type
+        institution
+        profileImage
+        name
+        category {
+          _id
+          name
+        }
+        uid {
+          _id
+          firstName
+          middleName
+          lastName
+          title
+          profile {
+            profilePicture
+            profilePictureThumbnail
+          }
+          status
+          userStatus
+        }
+      }
+    }
+    count
+  }
+}

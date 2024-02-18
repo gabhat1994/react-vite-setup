@@ -1,0 +1,7 @@
+query myInvoiceById($input: SelectedInvoiceInput) {
+  getSelectedInvoiceDetails(input: $input) {
+    linked_payments {
+      txn_status
+    }
+  }
+}

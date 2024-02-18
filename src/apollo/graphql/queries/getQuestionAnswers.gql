@@ -1,0 +1,18 @@
+query getQuestionAnswers(
+  $spaceId: ID!
+  $questionId: ID!
+  $limit: Int
+  $offset: Int
+) {
+  getQuestionAnswers(
+    spaceId: $spaceId
+    questionId: $questionId
+    limit: $limit
+    offset: $offset
+  ) {
+    data {
+      ...AnswerOutput
+    }
+    totalCount
+  }
+}

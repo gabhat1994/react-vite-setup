@@ -1,0 +1,5 @@
+mutation createInvoicePayment($input: InvoicePaymentInput!) {
+  createInvoicePayment(input: $input) {
+    _id
+  }
+}

@@ -1,0 +1,8 @@
+mutation createNewCampaign($input: AdCampaignInput) {
+  createAdCampaign(input: $input) {
+    _id
+    noumId {
+      _id
+    }
+  }
+}

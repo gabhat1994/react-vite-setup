@@ -1,0 +1,9 @@
+mutation updateCustomerAddressDetails($input: CustomerAddressInput) {
+  updateCustomerAddressDetails(input: $input) {
+    apartment
+    city
+    state
+    street
+    zipcode
+  }
+}

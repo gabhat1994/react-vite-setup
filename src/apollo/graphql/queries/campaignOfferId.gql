@@ -1,0 +1,14 @@
+query campaignOfferId(
+  $campaignId: String!
+  $pagination: ChamberPaginationInput
+) {
+  getAdCampaignOffers(campaignId: $campaignId, pagination: $pagination) {
+    count
+    data {
+      _id
+      createdAt
+      status
+      oid
+    }
+  }
+}

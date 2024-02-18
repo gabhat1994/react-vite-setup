@@ -1,0 +1,26 @@
+query allUsersWithoutEvent(
+  $filter: SearchUserFilter
+  $limit: Int
+  $offset: Int
+  $search: String
+  $type: UserRelationType
+  $activeUserOnly: Boolean
+  $chamberId: ID
+  $oldConnectionFlow: Boolean
+) {
+  allUsers(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    search: $search
+    type: $type
+    activeUserOnly: $activeUserOnly
+    chamberId: $chamberId
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    count
+    data {
+      ...UserOutput
+    }
+  }
+}

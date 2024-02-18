@@ -1,0 +1,5 @@
+mutation addCommentToPost($_id: ID!, $content: String, $tags: [TagsInput]) {
+  addCommentToPost(_id: $_id, content: $content, tags: $tags) {
+    ...CommentOutput
+  }
+}

@@ -1,0 +1,5 @@
+mutation updateNotificationsReadStatus($_id: ID) {
+  updateNotificationsReadStatus(_id: $_id) {
+    unreadCount
+  }
+}

@@ -1,0 +1,9 @@
+query checkWalletExists($targetUserId: ID!) {
+  checkWalletExists(targetUserId: $targetUserId) {
+    source
+    success
+    target
+    sourceId
+    targetId
+  }
+}

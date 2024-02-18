@@ -1,0 +1,3 @@
+mutation saveNoumLayoutAsDraft($ID: ID!) {
+  saveNoumLayoutAsDraft(noumId: $ID)
+}

@@ -1,0 +1,9 @@
+mutation updateConnectionStatus(
+  $connectionId: ID!
+  $status: ConnectionRequestTypeEnum
+) {
+  updateConnectionStatus(connectionId: $connectionId, status: $status) {
+    _id
+    ...SpaceConnectionBasic
+  }
+}

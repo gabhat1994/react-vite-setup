@@ -1,0 +1,7 @@
+fragment Cohost on Cohost {
+  _id
+  status
+  userId {
+    ...UserOutput
+  }
+}

@@ -1,0 +1,5 @@
+query getAccounts($input: AccountListInput!) {
+  getAccountList(query: $input) {
+    ...AccountListOutput
+  }
+}

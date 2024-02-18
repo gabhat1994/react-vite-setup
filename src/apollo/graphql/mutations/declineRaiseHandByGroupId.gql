@@ -1,0 +1,8 @@
+mutation declineRaiseHandByGroupId($groupId: ID!, $requestedByUserId: ID!) {
+  declineRaiseHandByGroupId(
+    groupId: $groupId
+    requestedByUserId: $requestedByUserId
+  ) {
+    _id
+  }
+}

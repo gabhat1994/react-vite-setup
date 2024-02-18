@@ -1,0 +1,11 @@
+mutation deleteReplyToCommentV2(
+  $commentId: String
+  $postId: ID!
+  $replyId: String
+) {
+  deleteReplyToCommentV2(
+    commentId: $commentId
+    postId: $postId
+    replyId: $replyId
+  )
+}

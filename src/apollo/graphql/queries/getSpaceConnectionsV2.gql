@@ -1,0 +1,77 @@
+query getSpaceConnectionsV2(
+  $spaceId: ID!
+  $limit: Int
+  $offset: Int
+  $status: [ConnectionRequestTypeEnum]
+) {
+  getSpaceConnectionsV2(
+    spaceId: $spaceId
+    limit: $limit
+    offset: $offset
+    status: $status
+  ) {
+    count
+    data {
+      _id
+      requestedAt
+      approvedAt
+      status
+      type
+      permission
+      draft {
+        permission
+      }
+      status
+      requestTo {
+        _id
+        name
+        projectType
+        permission
+        uid {
+          _id
+          firstName
+          middleName
+          lastName
+          userStatus
+          email
+          title
+          profile {
+            profilePicture
+            profilePictureThumbnail
+          }
+          chamber {
+            _id
+            type
+            name
+            userId
+          }
+        }
+      }
+      requestFrom {
+        _id
+        name
+        projectType
+        permission
+        uid {
+          _id
+          firstName
+          middleName
+          lastName
+          email
+          title
+          userStatus
+          profile {
+            profilePicture
+            profilePictureThumbnail
+          }
+          chamber {
+            _id
+            type
+            name
+            userId
+          }
+        }
+      }
+    }
+  }
+}

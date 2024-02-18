@@ -1,0 +1,39 @@
+mutation updateProjectChamber($id: ID!, $input: ProjectChamberUpdateInput) {
+  updateProjectChamber(spaceId: $id, input: $input) {
+    _id
+    description
+    updatedAt
+    layout {
+      ...NoumLayout
+    }
+    institution
+    name
+    networks {
+      ...NetworkOutput
+    }
+    permission
+    profileImage
+    status
+    title
+    token {
+      ...Token
+    }
+    type
+    uid {
+      ...UserOutput
+    }
+    category {
+      _id
+    }
+    draft {
+      ...SpaceDraftData
+    }
+    unSaved {
+      ...SpaceDraftData
+    }
+    theme {
+      ...ThemeOutput
+    }
+    fonts
+  }
+}

@@ -1,0 +1,5 @@
+mutation resignFromNoumCoManagerRole(
+  $input: ResignFromNoumCoManagerRoleInput!
+) {
+  resignFromNoumCoManagerRole(input: $input)
+}

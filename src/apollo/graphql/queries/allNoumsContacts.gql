@@ -1,0 +1,15 @@
+query allNoumsContacts(
+  $limit: Int
+  $offset: Int
+  $query: String
+  $status: NoumContactStatus
+) {
+  allNoumsContacts(
+    input: { limit: $limit, offset: $offset, query: $query, status: $status }
+  ) {
+    count
+    data {
+      ...SearchableNoumContact
+    }
+  }
+}

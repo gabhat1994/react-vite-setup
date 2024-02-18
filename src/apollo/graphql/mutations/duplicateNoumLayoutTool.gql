@@ -1,0 +1,5 @@
+mutation duplicateNoumLayoutTool($toolId: ID!) {
+  duplicateNoumLayoutTool(toolId: $toolId) {
+    ...ElementOutput
+  }
+}

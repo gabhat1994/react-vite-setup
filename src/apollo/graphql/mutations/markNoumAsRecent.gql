@@ -1,0 +1,3 @@
+mutation markNoumAsRecent($noumId: ID!) {
+  markNoumAsRecent(noumId: $noumId)
+}

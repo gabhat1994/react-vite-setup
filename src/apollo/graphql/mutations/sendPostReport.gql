@@ -1,0 +1,5 @@
+mutation sendPostReport($input: ReportInput) {
+  sendPostReport(input: $input) {
+    _id
+  }
+}

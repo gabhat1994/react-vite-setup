@@ -1,0 +1,6 @@
+mutation updatePost($_id: ID!, $input: PostInput) {
+  updatePost(_id: $_id, input: $input) {
+    _id
+    postStatus
+  }
+}

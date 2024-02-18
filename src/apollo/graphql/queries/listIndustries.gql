@@ -1,0 +1,10 @@
+query listIndustries($limit: Int, $offset: Int) {
+  listIndustries(limit: $limit, offset: $offset) {
+    data {
+      name
+      type
+    }
+    count
+    __typename
+  }
+}

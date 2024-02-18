@@ -1,0 +1,2 @@
+export const PLAN_DISPLAY_LIMIT = 3;
+export const STEPPER_SUBTRACTION_FACTOR = 2;

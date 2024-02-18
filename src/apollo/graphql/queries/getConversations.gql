@@ -1,0 +1,36 @@
+query getConversations(
+  $type: GetConversationsFilterType
+  $limit: Int
+  $offset: Int
+) {
+  getConversations(filter: { type: $type }, limit: $limit, offset: $offset) {
+    count
+    unreadCount
+    data {
+      ... on BasicConversationItem {
+        unread
+        conversation {
+          ...ConversationOutput
+        }
+      }
+      ... on NoumGroupConversationItem {
+        conversationsCount
+        unreadConversation
+        conversations {
+          unread
+          conversation {
+            ...ConversationOutput
+          }
+        }
+        noum {
+          _id
+          name
+          profileImage
+          uid {
+            _id
+          }
+        }
+      }
+    }
+  }
+}

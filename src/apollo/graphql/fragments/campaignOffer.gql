@@ -1,0 +1,33 @@
+fragment CampaignOffer on AdCampaignOffer {
+  _id
+  startAt
+  costTotal
+  costWeekly
+  clicksWeekly
+  cpc
+  reachTotal
+  status
+  createdAt
+  message
+  updatedAt
+  startAt
+  endAt
+  oid
+  createdBy {
+    firstName
+    lastName
+    profile {
+      profilePicture
+    }
+  }
+  goalNoumVisibility {
+    currentViews
+    predictedViews
+  }
+  goalConnectedUsers {
+    currentUsers
+    predictedUsers
+    currentFollowers
+    predictedFollowers
+  }
+}

@@ -1,0 +1,8 @@
+mutation removeReaction($_id: ID!, $type: ReactionCategory) {
+  removeReaction(_id: $_id, type: $type) {
+    _id
+    reactions {
+      ...PostReactionFragment
+    }
+  }
+}

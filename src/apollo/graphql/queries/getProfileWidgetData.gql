@@ -1,0 +1,18 @@
+query getProfileWidgetData($id: ID!) {
+  user(_id: $id) {
+    _id
+    bio
+    title
+    firstName
+    lastName
+    username
+    location
+    connection
+    updatedAt
+    userStatus
+    profile {
+      profilePicture
+      profilePictureThumbnail
+    }
+  }
+}

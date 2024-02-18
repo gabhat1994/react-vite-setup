@@ -1,0 +1,11 @@
+fragment UserPreferences on UserPreferences {
+  timezone
+  emailSubscriptions {
+    messagesAndConnections
+    marketing
+    paymentsAndOTPs
+    events
+    postAndCommentMentions
+  }
+  userId
+}

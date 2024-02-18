@@ -1,0 +1,17 @@
+fragment NoumenaScore on NoumenaScoreOutput {
+  status
+  visibility
+  capitalQuotient
+}
+fragment CQForm on CQForm {
+  details
+  formId
+  status
+}
+fragment CQFormOutput on CQFormOutput {
+  updatedAt
+  status
+  forms {
+    ...CQForm
+  }
+}

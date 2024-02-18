@@ -1,0 +1,16 @@
+fragment ThemeColors on ThemeColors {
+  secondary
+  primary
+  gray
+  success
+  error
+  noums {
+    investment
+    project
+    social
+    special
+    member
+    story
+  }
+  miscColors
+}

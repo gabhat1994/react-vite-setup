@@ -1,0 +1,11 @@
+mutation removeElement(
+  $elementId: ID!
+  $noumId: ID!
+  $userHomeNoumId: ID! = ""
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter = UNPUBLISHED
+) {
+  removeElement(elementId: $elementId, spaceId: $noumId) {
+    ...SpaceOutput
+  }
+}

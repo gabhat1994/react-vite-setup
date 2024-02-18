@@ -1,0 +1,13 @@
+query coManagerStatistics(
+  $noumId: ID!
+  $userId: ID!
+  $filter: NoumActivityStatsFilter
+) {
+  getNoumActivityStats(noumId: $noumId, userId: $userId, filter: $filter) {
+    postsPosted
+    messagesSent
+    membersInvited
+    transactions
+    eventsHosted
+  }
+}

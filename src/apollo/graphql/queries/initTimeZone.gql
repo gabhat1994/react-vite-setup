@@ -1,0 +1,5 @@
+query initTimezone($timezone: String!) {
+  initTimezone(timezone: $timezone) {
+    ...Timezone
+  }
+}

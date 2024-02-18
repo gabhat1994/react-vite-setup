@@ -1,0 +1,3 @@
+mutation initiateTipForAnswer($input: TipsInput!) {
+  initiateTipForAnswer(input: $input)
+}

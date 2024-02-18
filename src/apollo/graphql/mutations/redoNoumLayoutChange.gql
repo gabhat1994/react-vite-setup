@@ -1,0 +1,5 @@
+mutation redoNoumLayoutChange($noumId: ID!) {
+  redoNoumLayoutChange(noumId: $noumId) {
+    ...NoumLayout
+  }
+}

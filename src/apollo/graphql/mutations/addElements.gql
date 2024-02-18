@@ -1,0 +1,13 @@
+mutation addElements(
+  $input: [CreateElementInput]
+  $spaceId: ID!
+  $isCalledFromNoumEditor2: Boolean
+) {
+  addElements(
+    input: $input
+    spaceId: $spaceId
+    isCalledFromNoumEditor2: $isCalledFromNoumEditor2
+  ) {
+    ...ElementOutput
+  }
+}

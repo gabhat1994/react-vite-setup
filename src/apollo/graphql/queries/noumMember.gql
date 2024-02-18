@@ -1,0 +1,5 @@
+query noumMember($noumId: ID!, $memberId: ID!) {
+  noumMember(memberId: $memberId) {
+    ...NoumMemberWithInvitation
+  }
+}

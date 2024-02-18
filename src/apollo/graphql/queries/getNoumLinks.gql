@@ -1,0 +1,9 @@
+query getNoumLinks($limit: Int, $offset: Int, $sorting: NoumLinkSorting) {
+  getNoumLinks(limit: $limit, offset: $offset, sorting: $sorting) {
+    data {
+      ...NoumLink
+    }
+    count
+    __typename
+  }
+}

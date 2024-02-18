@@ -1,0 +1,21 @@
+query GetCleverTapUser($homeNoumId: ID!, $referralProduct: String!) {
+  space: getSpaceById(id: $homeNoumId) {
+    percentCompleted
+    token {
+      ...Token
+    }
+  }
+  referralEntry: userReferralEntry(productKey: $referralProduct) {
+    referralCode
+  }
+  cq: capitalquotient {
+    getNoumenaScore {
+      capitalQuotient
+    }
+  }
+  wallets: getAccountList(
+    query: { self: true, accountType: WALLET, limit: 100, page: 1 }
+  ) {
+    id
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "isolatedModules": false,
+    "types": ["cypress", "node", "cypress-xpath"],
+    "rootDir": "../",
+    "sourceMap": false
+  },
+  "include": ["**/*.ts", "**/*.spec.tsx"],
+  "exclude": ["**/*.template.tsx"]
+}

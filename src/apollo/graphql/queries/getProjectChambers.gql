@@ -1,0 +1,28 @@
+query getProjectChambers($filter: ProjectChamberFilter) {
+  getProjectChambers(filter: $filter) {
+    data {
+      _id
+      name
+      status
+      profileImage
+      type
+      followersCount
+      category {
+        name
+      }
+      uid {
+        profile {
+          profilePicture
+        }
+        firstName
+        title
+        lastName
+        _id
+        firstName
+        middleName
+        lastName
+        location
+      }
+    }
+  }
+}

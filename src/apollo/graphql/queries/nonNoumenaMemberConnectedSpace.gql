@@ -1,0 +1,5 @@
+query nonNoumenaMemberConnectedSpace($id: ID!) {
+  getSpaceById(id: $id) {
+    isConnected
+  }
+}

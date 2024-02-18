@@ -1,0 +1,34 @@
+fragment ConversationUserOutput on UserOutput {
+  _id
+  firstName
+  lastName
+  username
+  profile {
+    _id
+    profilePicture
+    profilePictureThumbnail
+  }
+  title
+  userStatus
+  status
+  chamber {
+    _id
+    userId
+  }
+}
+
+fragment ConversationOutput on ConversationOutput {
+  _id
+  cid
+  spaceId
+  type
+  participants {
+    ...ConversationUserOutput
+  }
+  metaData {
+    sid
+    totalUnreadConversationCount
+  }
+  createdAt
+  updatedAt
+}

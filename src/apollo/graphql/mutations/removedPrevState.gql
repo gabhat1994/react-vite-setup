@@ -1,0 +1,11 @@
+mutation removedPrevState(
+  $noumId: ID!
+  $state: ElementStatusEnumForStateChange!
+  $userHomeNoumId: ID! = ""
+  $status: NoumLayoutStatusFilter = UNPUBLISHED
+  $editorV2Enabled: Boolean = true
+) {
+  removedPrevState(spaceId: $noumId, state: $state) {
+    ...SpaceOutput
+  }
+}

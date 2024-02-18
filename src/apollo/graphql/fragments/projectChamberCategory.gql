@@ -1,0 +1,4 @@
+fragment ProjectChamberCategory on ProjectChamberCategory {
+  _id
+  name
+}

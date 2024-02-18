@@ -1,0 +1,62 @@
+fragment Contract on Contract {
+  _id
+  contractNumber
+  title
+  status
+  linkedNoum {
+    ...NoumContractLinkedNoumBasic
+  }
+  buyer {
+    ...NoumContact
+  }
+  seller {
+    ...NoumContact
+  }
+  createdBy {
+    _id
+  }
+  templateName
+  effectiveDate
+  terminationNoticeInDays
+  legalJurisdiction {
+    country
+    state
+    region
+  }
+  arbitrationJurisdiction {
+    country
+    state
+    region
+  }
+  logo
+  timeline {
+    ...ContractSowTimeline
+  }
+  isCompleted
+}
+
+fragment ContractBasic on Contract {
+  _id
+  contractNumber
+  title
+  status
+  effectiveDate
+  buyer {
+    _id
+    displayName
+  }
+  seller {
+    _id
+    displayName
+  }
+  createdBy {
+    _id
+  }
+  isCompleted
+}
+
+fragment NoumContractLinkedNoumBasic on SpaceOutput {
+  _id
+  name
+  profileImageThumbnail
+}

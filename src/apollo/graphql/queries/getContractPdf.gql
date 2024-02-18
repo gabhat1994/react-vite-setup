@@ -1,0 +1,14 @@
+query GetContractPdf($id: ID!) {
+  getSingleContract(_id: $id) {
+    _id
+    contractPDF {
+      base64
+    }
+  }
+}
+
+query GetContractPdfWithSignature($id: ID!, $contactId: ID!) {
+  previewWithSign(entity: CONTRACT, _id: $id, contactId: $contactId) {
+    base64
+  }
+}

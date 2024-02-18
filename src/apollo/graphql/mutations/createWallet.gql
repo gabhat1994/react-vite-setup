@@ -1,0 +1,6 @@
+mutation createWallet($input: CreateCustomerInput!) {
+  createCustomer(input: $input) {
+    stripeCustomer
+    dwollaCustomer
+  }
+}

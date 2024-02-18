@@ -1,0 +1,12 @@
+query campaignReportsId($limit: Int!, $offset: Int!, $campaignId: ID!) {
+  getAdCampaignReports(
+    limit: $limit
+    offset: $offset
+    campaignId: $campaignId
+  ) {
+    count
+    data {
+      ...CampaignReportForCampaignSummary
+    }
+  }
+}

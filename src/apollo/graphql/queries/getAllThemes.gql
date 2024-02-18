@@ -1,0 +1,12 @@
+query getAllThemes {
+  getAllThemes(limit: 100, offset: 0) {
+    count
+    data {
+      _id
+      name
+      colors {
+        ...ThemeColors
+      }
+    }
+  }
+}

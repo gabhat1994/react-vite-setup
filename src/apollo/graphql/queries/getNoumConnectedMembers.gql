@@ -1,0 +1,37 @@
+query getNoumConnectedMembers(
+  $noumId: ID!
+  $offset: Int
+  $limit: Int
+  $sort: SortType
+) {
+  getNoumConnectedMembers(
+    noumId: $noumId
+    offset: $offset
+    limit: $limit
+    sort: $sort
+  ) {
+    data {
+      _id
+      uid {
+        _id
+        firstName
+        middleName
+        lastName
+        email
+        title
+        profile {
+          profilePicture
+          profilePictureThumbnail
+        }
+        chamber {
+          _id
+          userId
+        }
+        userStatus
+      }
+      lastUpdatedAt
+      approvedAt
+    }
+    count
+  }
+}

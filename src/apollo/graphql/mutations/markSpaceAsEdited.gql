@@ -1,0 +1,6 @@
+mutation markSpaceAsEdited($spaceId: ID!) {
+  markSpaceAsEdited(spaceId: $spaceId) {
+    _id
+    updatedAt
+  }
+}

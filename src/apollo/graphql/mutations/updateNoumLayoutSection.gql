@@ -1,0 +1,17 @@
+mutation updateNoumLayoutSection($input: UpdateNoumLayoutSectionInput!) {
+  updateNoumLayoutSection(input: $input) {
+    _id
+    type
+    columnsVerticalAlignType
+    position
+    background
+    columns {
+      _id
+      background
+      position
+      tools {
+        ...ElementOutput
+      }
+    }
+  }
+}

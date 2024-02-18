@@ -1,0 +1,26 @@
+query allUsers(
+  $filter: SearchUserFilter
+  $limit: Int
+  $offset: Int
+  $search: String
+  $eventId: ID
+  $chamberId: ID
+  $oldConnectionFlow: Boolean
+) {
+  allUsers(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    search: $search
+    chamberId: $chamberId
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    count
+    data {
+      ...UserOutput
+      getEventUserRole(eventId: $eventId) {
+        ...EventCurrentUser
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query getNoumClassByNoumId($noumId: ID!) {
+  getNoumClassByNoumId(noumId: $noumId) {
+    _id
+    name
+    type
+    isDeleted
+    programId {
+      _id
+      isDeleted
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation initiateMicroDepositDwolla($input: AccountRoutingInput!) {
+  initiateMicroDepositDwolla(input: $input) {
+    ...AccountListOutput
+  }
+}

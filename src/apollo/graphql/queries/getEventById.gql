@@ -1,0 +1,12 @@
+query GetEventById($id: ID!) {
+  getEventById(_id: $id) {
+    ...Event
+  }
+}
+
+query getEventStatus($id: ID!) {
+  getEventById(_id: $id) {
+    _id
+    status
+  }
+}

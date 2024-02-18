@@ -1,0 +1,22 @@
+query getUserCampaigns(
+  $offset: Int
+  $limit: Int
+  $filter: ProjectNoumCampaignFilter
+) {
+  getUserCampaigns(offset: $offset, limit: $limit, filter: $filter) {
+    data {
+      _id
+      status
+      views
+      followersGained
+      connectionsDeclined
+      connectionsMade
+      clicksToNoums
+      invitesSent
+      startedAt
+      refreshedAt
+      finishedAt
+    }
+    count
+  }
+}

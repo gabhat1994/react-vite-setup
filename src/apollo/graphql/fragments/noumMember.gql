@@ -1,0 +1,97 @@
+fragment NoumMemberBasic on NoumMember {
+  _id
+  noumId
+  user {
+    ...UserBasicOutput
+  }
+  noum {
+    _id
+    type
+  }
+  role {
+    ...NoumMemberRoleBasic
+  }
+  previousRole {
+    ...NoumMemberRoleBasic
+  }
+  status
+  connectedAt
+  updatedAt
+  rolePromotionToApprove {
+    ...NoumMemberRoleForPromotion
+  }
+  noumId
+  requestedAt
+}
+
+fragment NoumMemberRoleBasic on NoumMemberRole {
+  _id
+  name
+  isManager
+  rolePromotedBy {
+    ...UserBasicOutput
+  }
+}
+
+fragment NoumMemberRoleForPromotion on NoumMemberRole {
+  ...NoumMemberRoleBasic
+  rolePromotedBy {
+    ...UserBasicOutput
+  }
+}
+
+fragment NoumMemberWithInvitation on NoumMember {
+  ...NoumMemberBasic
+  activeRequest(noumId: $noumId) {
+    _id
+    requestedAt
+    user {
+      _id
+    }
+  }
+  activeInvitation(noumId: $noumId) {
+    _id
+    invitedAt
+  }
+}
+
+fragment NoumRoleForDropdown on NoumRole {
+  _id
+  name
+}
+
+fragment NoumRoleForInfo on NoumRole {
+  _id
+  name
+  description
+  groupedPermissions {
+    ...NoumRolePermissionGroupForInfo
+  }
+}
+
+fragment NoumRolePermissionGroupForInfo on NoumRolePermissionGroup {
+  level
+  elementType
+  permissionIDs
+  permissions {
+    id
+    isActive
+  }
+}
+
+fragment NoumMemberForUserMembers on NoumMember {
+  _id
+  user {
+    ...UserBasicOutput
+  }
+  noum {
+    _id
+    name
+    profileImage
+    type
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  requestedAt
+}

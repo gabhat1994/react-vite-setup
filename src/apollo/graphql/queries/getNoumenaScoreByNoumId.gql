@@ -1,0 +1,8 @@
+query getNoumenaScoreByNoumId($noumId: ID!) {
+  capitalquotient {
+    getNoumenaScoreByNoumId(noumId: $noumId) {
+      noumId
+      capitalQuotient
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query users(
+  $filter: SearchUserFilter
+  $limit: Int
+  $offset: Int
+  $search: String
+) {
+  users(filter: $filter, limit: $limit, offset: $offset, search: $search) {
+    ...UserOutput
+  }
+}

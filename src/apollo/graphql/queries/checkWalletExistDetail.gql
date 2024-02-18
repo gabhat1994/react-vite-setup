@@ -1,0 +1,22 @@
+query checkWalletExistDetail(
+  $sourceUserId: ID!
+  $targetUserId: ID!
+  $noumId: ID!
+  $invoiceId: ID
+) {
+  checkWalletExistDetail(
+    sourceUserId: $sourceUserId
+    targetUserId: $targetUserId
+    noumId: $noumId
+    invoiceId: $invoiceId
+  ) {
+    sourceWallet
+    targetWallet
+    sourceWalletDetail {
+      ...AccountListOutput
+    }
+    targetWalletDetail {
+      ...AccountListOutput
+    }
+  }
+}

@@ -1,0 +1,5 @@
+query post($_id: ID) {
+  post(_id: $_id) {
+    ...PostItem
+  }
+}

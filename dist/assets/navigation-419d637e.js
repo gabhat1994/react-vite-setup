@@ -1,0 +1,2 @@
+import{a9 as u,aB as l,r as s}from"./vendor-51460554.js";function p(){var n;const t=u(),a=l(),r=s.useCallback(({fallbackUrl:i}={})=>{var e;(e=a.state)!=null&&e.origin?t(a.state.origin):t(i||-1)},[(n=a.state)==null?void 0:n.origin,t]),g=s.useCallback((i,e)=>{var o;t(i,{...e,state:{origin:(o=a.state)==null?void 0:o.origin}})},[a.state,t]),c=s.useCallback((i,e)=>{t(i,{...e,state:{origin:a.pathname+a.search}})},[a.pathname,a.search,t]);return{goBackToOrigin:r,navigateAndPassOrigin:g,navigateAndSetOrigin:c}}export{p as u};
+//# sourceMappingURL=navigation-419d637e.js.map

@@ -1,0 +1,44 @@
+fragment PostItem on PostOutput {
+  _id
+  commentsCount
+  createdAt
+  isPinned
+  chamber {
+    ...ChamberByIdRef
+  }
+  pinnedTimestamp
+  post {
+    ...PostData
+  }
+  rawJSON
+  postStatus
+  reactionsCount
+  uid {
+    ...UserBasicOutput
+  }
+  updatedAt
+  text
+  userReaction
+  visibility
+  tags {
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  reactions {
+    ...PostReactionFragment
+  }
+}
+
+fragment PostReactionFragment on Reaction {
+  _id
+  uid {
+    ...UserBasicOutput
+  }
+}
+
+fragment PostData on Post {
+  category
+  content
+  thumbnail
+}

@@ -1,0 +1,244 @@
+fragment SpaceBasic on SpaceOutput {
+  _id
+  name
+  description
+  profileImage
+  isFollowing
+  followersCount
+  category {
+    _id
+    name
+  }
+  theme {
+    ...ThemeOutput
+  }
+  fonts
+}
+
+fragment NoumTransactionOnSpaceOutput on NoumTransactionFeeByChamberIdRef {
+  subscription_id {
+    subscription_id
+  }
+}
+
+fragment NoumUserConnectionState on SpaceOutput {
+  # Required by both, at least for now.
+  isFollowing
+  connectionRole
+
+  # Legacy connection flow
+  connectionWithNoum(noumId: $userHomeNoumId) {
+    ...SpaceConnectionBasic
+  }
+  connectionId
+  isConnected
+
+  # New member flow
+  membershipStatus {
+    ...NoumMembershipStatus
+  }
+  activeInvitation {
+    ...ActiveNoumInvitation
+  }
+}
+
+fragment NoumWithLayout on SpaceOutput {
+  layout(status: $status, editorV2Enabled: $editorV2Enabled)
+    @include(if: $editorV2Enabled) {
+    ...NoumLayout
+  }
+  elements @skip(if: $editorV2Enabled) {
+    ...ElementOutput
+  }
+  lastCustomPreviewSavedTime
+}
+
+fragment SpaceOutput on SpaceOutput {
+  ...SpaceBasic
+  ...NoumUserConnectionState
+  ...NoumWithLayout
+
+  # TODO: This needs to stay here til we figure out how to not use it from SpaceOutput OR when we deprecate the field.
+  connectionWithNoum(noumId: $userHomeNoumId) {
+    ...SpaceConnectionBasic
+  }
+
+  uid {
+    ...NoumOwnerUser
+  }
+  name
+  title
+  description
+  broadcastedAt
+  tempStatus
+  isFavourited
+  profileImage
+  headerBackgroundUrl
+  requestedAt
+  createdAt
+  enableAds
+  adsMeta
+  keywords
+  approvedAt
+  slug
+  institution
+  type
+  status
+  permission
+  draft {
+    ...SpaceDraftData
+  }
+  connectionsCount
+  link {
+    ...NoumLink
+  }
+  networks {
+    ...NetworkOutput
+  }
+  token {
+    ...Token
+  }
+  tokenTransaction {
+    ...TokenTransaction
+  }
+  noumTransactionFee {
+    ...NoumTransactionOnSpaceOutput
+  }
+  percentCompleted
+  updatedAt
+  publishedAt
+  category {
+    ...ProjectChamberCategory
+  }
+  projectType
+  followersCount
+  theme {
+    _id
+    name
+  }
+  archivedAt
+  unSaved {
+    title
+    description
+    projectType
+    name
+    profileImage
+    theme {
+      _id
+      name
+    }
+    fonts
+  }
+  fonts
+}
+
+fragment ActiveNoumInvitation on ActiveNoumInvitation {
+  _id
+  invitedAt
+}
+
+fragment SpaceForList on SpaceOutput {
+  _id
+  name
+  title
+  description
+  profileImage
+  status
+  type
+  permission
+  followersCount
+  isFollowing
+  isConnected
+  connectionsCount
+  connectionId
+  isFavourited
+  broadcastedAt
+  projectType
+  category {
+    _id
+    name
+  }
+  elements {
+    _id
+    elementType
+    status
+    tempStatus
+  }
+  networks {
+    _id
+  }
+  uid {
+    ...UserBasicOutput
+    location
+  }
+}
+fragment SpaceConnectionBasic on SpaceConnection {
+  _id
+  status
+  requestTo {
+    _id
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  requestFrom {
+    _id
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  type
+  message
+  approvedAt
+  permission
+  draft {
+    permission
+  }
+}
+
+fragment SpaceDraftData on SpaceDraftData {
+  projectType
+  title
+  description
+  name
+  profileImage
+  theme {
+    ...ThemeOutput
+  }
+  fonts
+}
+
+fragment NoumOwnerUser on UserOutput {
+  ...UserBasicOutput
+  skills {
+    _id
+    name
+    icon
+  }
+  location
+  bio
+}
+
+fragment SpaceConnectionsForRequest on SpaceOutput {
+  _id
+  name
+  projectType
+  permission
+  uid {
+    ...UserBasicOutput
+    chamber {
+      ...ChamberByUserIdRef
+    }
+  }
+}
+
+fragment SpaceConnectionForNotification on SpaceConnection {
+  ...SpaceConnectionBasic
+  requestedAt
+  requestTo {
+    ...SpaceConnectionsForRequest
+  }
+  requestFrom {
+    ...SpaceConnectionsForRequest
+  }
+}

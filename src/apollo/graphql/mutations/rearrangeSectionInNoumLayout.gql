@@ -1,0 +1,5 @@
+mutation rearrangeSectionInNoumLayout(
+  $input: RearrangeSectionInNoumLayoutInput!
+) {
+  rearrangeSectionInNoumLayout(input: $input)
+}

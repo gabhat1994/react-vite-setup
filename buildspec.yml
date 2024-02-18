@@ -1,0 +1,30 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16.x
+  pre_build:
+    commands:
+      - export BUILD_METADATA="commit=$CODEBUILD_RESOLVED_SOURCE_VERSION,build=$CODEBUILD_BUILD_NUMBER"
+      - yarn
+
+  build:
+    commands:
+      # don't let other stages fail if there are no affected projects
+      - yarn build:prod
+    on-failure: ABORT
+  post_build:
+    commands:
+      - |
+        cd dist ;
+        echo In dist ... ;
+        mkdir -p src/assets;
+        cp -R ../src/assets/* src/assets ;
+        ls ;
+        zip -FSr $ARTIFACT.zip * ;
+        aws s3 cp $ARTIFACT.zip s3://$ARTIFACTS_BUCKET/$ARTIFACT/$ARTIFACT.zip --metadata $BUILD_METADATA ;
+        cd .. ;
+        echo Done. ;
+cache:
+  paths:
+    - node_modules/**/*

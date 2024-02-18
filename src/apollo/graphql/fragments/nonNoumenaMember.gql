@@ -1,0 +1,10 @@
+fragment InviteNonNoumUserOutput on inviteNonNoumUserOutput {
+  _id
+  uid {
+    ...UserBasicOutput
+  }
+  token
+  isActive
+  isVerified
+  requestedForNoumId
+}

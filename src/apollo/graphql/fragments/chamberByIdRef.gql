@@ -1,0 +1,11 @@
+fragment ChamberByIdRef on ChamberByIdRef {
+  _id
+  name
+  theme {
+    ...ThemeOutput
+  }
+  fonts
+  uid {
+    ...UserBasicOutput
+  }
+}

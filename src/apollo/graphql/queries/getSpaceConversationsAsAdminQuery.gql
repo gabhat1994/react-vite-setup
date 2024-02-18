@@ -1,0 +1,19 @@
+query getSpaceConversationsAsAdminQuery(
+  $spaceId: ID!
+  $limit: Int
+  $offset: Int
+  $filter: SearchChamberAdminFilter
+) {
+  getSpaceConversationsAsAdminQuery(
+    spaceId: $spaceId
+    limit: $limit
+    offset: $offset
+    filter: $filter
+  ) {
+    count
+    unreadMessageCount
+    data {
+      ...ConversationOutput
+    }
+  }
+}

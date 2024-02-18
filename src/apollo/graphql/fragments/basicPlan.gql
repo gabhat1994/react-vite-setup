@@ -1,0 +1,9 @@
+fragment BasicPlan on PlanSettingOutput {
+  enabled
+  category
+  sort_index
+  plan_setting_id
+  plans {
+    plan_name_id
+  }
+}

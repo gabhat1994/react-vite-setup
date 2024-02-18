@@ -1,0 +1,27 @@
+query GetNoumRoles($limit: Int!, $offset: Int!) {
+  noumRoles(
+    limit: $limit
+    offset: $offset
+    filterBy: Active
+    order: { sortBy: HIERARCHY_ORDER, order: asc }
+  ) {
+    count
+    data {
+      ...NoumRoleForDropdown
+    }
+  }
+}
+
+query GetNoumRolesInfo($limit: Int!, $offset: Int!) {
+  noumRoles(
+    limit: $limit
+    offset: $offset
+    filterBy: Active
+    order: { sortBy: HIERARCHY_ORDER, order: asc }
+  ) {
+    count
+    data {
+      ...NoumRoleForInfo
+    }
+  }
+}

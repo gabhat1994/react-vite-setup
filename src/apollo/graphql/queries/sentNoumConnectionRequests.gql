@@ -1,0 +1,8 @@
+query sentNoumConnectionRequests($limit: Int, $offset: Int) {
+  sentNoumConnectionRequests(input: { limit: $limit, offset: $offset }) {
+    count
+    data {
+      ...NoumPendingConnection
+    }
+  }
+}

@@ -1,0 +1,14 @@
+mutation addAnswer($questionId: ID!, $answerBody: String!) {
+  addAnswer(questionId: $questionId, answerBody: $answerBody) {
+    _id
+    answers {
+      _id
+      body
+      createdAt
+      updatedAt
+      user {
+        _id
+      }
+    }
+  }
+}

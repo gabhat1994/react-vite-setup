@@ -1,0 +1,6 @@
+mutation upsertDeviceToken($input: DeviceToken) {
+  upsertDeviceToken(input: $input) {
+    isActive
+    token
+  }
+}

@@ -1,0 +1,7 @@
+query preCalculateNoumLinkData($linkedNoumIDs: [ID!]!) {
+  preCalculateNoumLinkData(linkedNoumIDs: $linkedNoumIDs) {
+    connectionsCount
+    followersCount
+    membersCount
+  }
+}

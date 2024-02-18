@@ -1,0 +1,5 @@
+query chargebeeAnchors($forPurchase: Boolean!) {
+  getAllPlansDetails(forPurchase: $forPurchase) {
+    ...BasicPlan
+  }
+}

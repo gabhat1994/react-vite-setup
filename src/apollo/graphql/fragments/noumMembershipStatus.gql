@@ -1,0 +1,15 @@
+fragment NoumMembershipStatus on NoumMembershipStatus {
+  _id
+  status
+  connectedAt
+  status
+  role {
+    ...NoumMemberRoleBasic
+  }
+  invitationSentFrom {
+    ...UserBasicOutput
+  }
+  rolePromotionToApprove {
+    ...NoumMemberRoleForPromotion
+  }
+}

@@ -1,0 +1,6 @@
+mutation cancelKnock($knockId: ID!) {
+  cancelKnock(knockId: $knockId) {
+    _id
+    groupId
+  }
+}

@@ -1,0 +1,6 @@
+query socialHallByName($name: String!) {
+  socialHallByName(name: $name) {
+    _id
+    eventId
+  }
+}

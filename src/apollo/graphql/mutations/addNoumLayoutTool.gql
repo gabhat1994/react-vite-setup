@@ -1,0 +1,5 @@
+mutation addNoumLayoutTool($input: AddNoumLayoutToolInput!) {
+  addNoumLayoutTool(input: $input) {
+    ...ElementOutput
+  }
+}

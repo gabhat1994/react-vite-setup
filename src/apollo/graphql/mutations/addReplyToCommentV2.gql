@@ -1,0 +1,9 @@
+mutation addReplyToCommentV2(
+  $commentId: ID
+  $content: String
+  $tags: [TagsInput]
+) {
+  addReplyToCommentV2(commentId: $commentId, content: $content, tags: $tags) {
+    ...ThreadOutput
+  }
+}

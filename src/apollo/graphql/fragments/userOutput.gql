@@ -1,0 +1,58 @@
+fragment UserOutput on UserOutput {
+  _id
+  firstName
+  lastName
+  middleName
+  username
+  title
+  phone
+  email
+  location
+  bio
+  profile {
+    ...ProfileOutput
+  }
+  connection
+  userStatus
+  userType
+  createdAt
+  updatedAt
+  ageGroup {
+    ...MaxMinValue
+  }
+  freelancingExperience {
+    ...MaxMinValue
+  }
+  isAcceptedSkipMediaTesting
+  citizenship
+  SocialHallTCAccepted
+  status
+  visibility {
+    ...UserOutputVisibility
+  }
+  visibleTo {
+    ...UserOutputVisibilityTo
+  }
+  connections {
+    ...UserOutputVisibilityTo
+  }
+  unreadConnectionCount
+  referralCode
+  profileUrl
+  userOwnReferralCode
+  kycResult
+  creditCheckResult
+  roles {
+    ...UserRoleOutput
+  }
+  metadata {
+    ...LogsOutput
+  }
+  lastLoginAt
+  chamber {
+    ...ChamberByUserIdRef
+  }
+  skills {
+    ...Skill
+  }
+}

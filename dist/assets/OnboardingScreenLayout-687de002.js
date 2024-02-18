@@ -1,0 +1,2 @@
+import{u as r,e as a,j as n}from"./index-cd84bcc9.js";import{r as s}from"./vendor-51460554.js";import{A as i}from"./index-a3ee8d79.js";const d=({children:t})=>{const{width:o}=r(),e=s.useMemo(()=>o<=a.MOBILE_MAX,[o]);return n(i,{type:"onboarding",dynamicWidth:!0,overflow:"auto",dynamicHeight:e,"data-test":"OnboardingScreenLayout-AuthScreenLayout",children:t})};export{d as O};
+//# sourceMappingURL=OnboardingScreenLayout-687de002.js.map

@@ -1,0 +1,40 @@
+fragment EventEditAttendee on Attendees {
+  userId {
+    _id
+    firstName
+    middleName
+    lastName
+    email
+    userStatus
+    title
+    profile {
+      profilePicture
+      profilePictureThumbnail
+    }
+  }
+  chamberId {
+    _id
+  }
+  userRole
+  invitationId
+  invitationStatus
+}
+
+query GetEventEditAttendees($id: ID!) {
+  connected: getEventAttendees(
+    _id: $id
+    filter: { attendeesType: CONNECTED, invitationStatus: [ACCEPTED, PENDING] }
+  ) {
+    data {
+      ...EventEditAttendee
+    }
+  }
+  others: getEventAttendees(
+    _id: $id
+    filter: { attendeesType: OTHERS, invitationStatus: [ACCEPTED, PENDING] }
+  ) {
+    data {
+      ...EventEditAttendee
+    }
+  }
+}

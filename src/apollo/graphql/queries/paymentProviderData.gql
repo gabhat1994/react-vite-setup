@@ -1,0 +1,8 @@
+query getPaymentProviderData($input: AccountListInput!) {
+  getAccountList(query: $input) {
+    ...AccountListOutput
+  }
+  getCustomerPayeeList {
+    ...CustomerPayeeList
+  }
+}

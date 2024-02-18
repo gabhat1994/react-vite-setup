@@ -1,0 +1,15 @@
+query transactionLimits(
+  $sourceAccountId: ID!
+  $destinationAccountId: ID!
+  $invoicePayment: Boolean
+) {
+  getCustomerLimitsV2(
+    sourceAccountId: $sourceAccountId
+    destinationAccountId: $destinationAccountId
+    invoicePayment: $invoicePayment
+  ) {
+    transactionLimit
+    weeklyLimit
+    availableWeeklyLimit
+  }
+}

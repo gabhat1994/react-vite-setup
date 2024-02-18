@@ -1,0 +1,3 @@
+mutation blockUser($eventId: ID!, $userId: ID!, $isBlocked: Boolean) {
+  blockUser(eventId: $eventId, userId: $userId, isBlocked: $isBlocked)
+}

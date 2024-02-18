@@ -1,0 +1,5 @@
+query getSubscriptionById($subscription_id: Float!) {
+  getSubscriptionById(subscription_id: $subscription_id) {
+    ...Subscription
+  }
+}

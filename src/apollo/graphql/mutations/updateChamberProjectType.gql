@@ -1,0 +1,12 @@
+mutation updateChamberProjectType($id: ID!, $projectType: ProjectChamberType) {
+  updateProjectChamber(spaceId: $id, input: { projectType: $projectType }) {
+    _id
+    projectType
+    unSaved {
+      projectType
+    }
+    draft {
+      projectType
+    }
+  }
+}

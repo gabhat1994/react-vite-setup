@@ -1,0 +1,11 @@
+query getSingleNotification($id: ID!) {
+  notificationV2(_id: $id) {
+    _id
+    unread
+    type
+    data {
+      chamberId
+      message
+    }
+  }
+}

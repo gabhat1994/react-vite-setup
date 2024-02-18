@@ -1,0 +1,20 @@
+query getFollowingSpaces(
+  $userId: ID!
+  $limit: Int
+  $offset: Int
+  $sort: SortType
+  $filter: ProjectChamberFilter
+) {
+  getFollowingSpaces(
+    uid: $userId
+    limit: $limit
+    offset: $offset
+    filter: $filter
+    sort: $sort
+  ) {
+    data {
+      ...SpaceForList
+    }
+    count
+  }
+}

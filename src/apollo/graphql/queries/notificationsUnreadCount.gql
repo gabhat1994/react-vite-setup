@@ -1,0 +1,9 @@
+query notificationsUnreadCount {
+  notificationsUnreadCount {
+    total
+    Noums
+    Community
+    Money
+    Other
+  }
+}

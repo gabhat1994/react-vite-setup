@@ -1,0 +1,11 @@
+mutation ResendDocumentNotification(
+  $documentId: ID!
+  $type: ContractSOW!
+  $sendTo: [PARTIES!]!
+) {
+  resendContractOrSowNotification(
+    documentId: $documentId
+    type: $type
+    sendTo: $sendTo
+  )
+}

@@ -1,0 +1,12 @@
+mutation createUserInvoiceLineItem($input: InvoiceLineItemInput) {
+  createUserInvoiceLineItem(input: $input) {
+    id
+    description
+    quantity
+    unitPrice
+    taxRate
+    taxLabel
+    currency
+    amount
+  }
+}

@@ -1,0 +1,11 @@
+mutation updateUserInvoiceLineItem($_id: ID!, $input: UpdateInvoiceLineItemInput!) {
+  updateUserInvoiceLineItem(_id: $_id, input: $input) {
+    description
+    quantity
+    unitPrice
+    taxRate
+    taxLabel
+    currency
+    amount
+  }
+}

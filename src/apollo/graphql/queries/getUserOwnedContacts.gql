@@ -1,0 +1,8 @@
+query getUserOwnedContacts($filter: Contactfilter, $limit: Int, $offset: Int) {
+  getUserOwnedContacts(filter: $filter, limit: $limit, offset: $offset) {
+    count
+    data {
+      ...NoumContact
+    }
+  }
+}

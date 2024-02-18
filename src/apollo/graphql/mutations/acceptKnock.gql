@@ -1,0 +1,7 @@
+mutation acceptKnock($knockId: ID!) {
+  acceptKnock(knockId: $knockId) {
+    _id
+    token
+    channelName
+  }
+}

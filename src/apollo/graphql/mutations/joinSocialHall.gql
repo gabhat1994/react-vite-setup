@@ -1,0 +1,5 @@
+mutation joinSocialHallV2($name: String) {
+  joinSocialHallV2(name: $name) {
+    ...SocialHallAttendee
+  }
+}

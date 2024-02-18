@@ -1,0 +1,18 @@
+fragment Currency on CurrencyData {
+  value
+  currency
+}
+
+fragment Wallet on FundingSourceBalanceOutput {
+  status
+  providerStatus
+  noumenaStatus
+  docStatus
+  customerType
+  balance {
+    ...Currency
+  }
+  total {
+    ...Currency
+  }
+}

@@ -1,0 +1,5 @@
+query getInvoiceById($id: ID!) {
+  getInvoiceById(id: $id) {
+    ...InvoiceOutput
+  }
+}

@@ -1,0 +1,15 @@
+mutation createAccountDwolla($plaidToken: String!) {
+  createAccountDwolla(plaidToken: $plaidToken) {
+    message
+  }
+}
+mutation removeAccount($id: String!) {
+  removeAccount(id: $id) {
+    message
+  }
+}
+mutation updatePersonalInfo($input: CustomerAddressInput!) {
+  updateCustomerAddressDetails(input: $input) {
+    street
+  }
+}

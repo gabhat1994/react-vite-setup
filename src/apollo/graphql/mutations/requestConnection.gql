@@ -1,0 +1,9 @@
+mutation requestConnection($requestedSpaceId: ID!, $ownSpaceId: ID!) {
+  requestConnection(
+    requestedSpaceId: $requestedSpaceId
+    ownSpaceId: $ownSpaceId
+  ) {
+    _id
+    ...SpaceConnectionBasic
+  }
+}

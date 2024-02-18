@@ -1,0 +1,6 @@
+query getSecurityQuestionsReset {
+  getSecurityQuestionsForReset {
+    id
+    question
+  }
+}

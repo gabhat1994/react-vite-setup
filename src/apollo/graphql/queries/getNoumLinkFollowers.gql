@@ -1,0 +1,30 @@
+query getNoumLinkFollowers(
+  $limit: Int
+  $offset: Int
+  $noumLinkId: ID = ""
+  $sort: SortType
+) {
+  getNoumLinkFollowers(
+    limit: $limit
+    offset: $offset
+    noumLinkId: $noumLinkId
+    sort: $sort
+  ) {
+    data {
+      _id
+      type
+      name
+      approvedAt
+      uid {
+        _id
+        title
+        profile {
+          profilePictureThumbnail
+          profilePicture
+        }
+      }
+      lastUpdatedAt
+    }
+    count
+  }
+}

@@ -1,0 +1,19 @@
+fragment Token on Token {
+  _id
+  count
+}
+
+fragment TokenTransaction on TokenTransaction {
+  chamberId
+  data {
+    ...TokenTransactionType
+  }
+}
+
+fragment TokenTransactionType on TokenTransactionType {
+  count
+  activityType
+  message
+  createdAt
+  id
+}

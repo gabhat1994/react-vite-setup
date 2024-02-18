@@ -1,0 +1,5 @@
+mutation UpdateNoumContact($input: UpdateNoumContactInput!) {
+  updateNoumContact(input: $input) {
+    ...NoumContact
+  }
+}

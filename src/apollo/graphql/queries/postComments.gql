@@ -1,0 +1,14 @@
+query postComments($limit: Int, $offset: Int, $postId: ID!) {
+  postComments(limit: $limit, offset: $offset, postId: $postId) {
+    count
+    data {
+      ...PostComment
+    }
+  }
+}
+
+query postCommentsCount($limit: Int, $offset: Int, $postId: ID!) {
+  postComments(limit: $limit, offset: $offset, postId: $postId) {
+    count
+  }
+}

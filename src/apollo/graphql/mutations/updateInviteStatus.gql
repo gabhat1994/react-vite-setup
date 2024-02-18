@@ -1,0 +1,9 @@
+mutation UpdateInviteStatus(
+  $id: ID!
+  $status: InvitationStatus!
+  $acceptAll: Boolean
+) {
+  updateInviteStatus(_id: $id, status: $status, acceptAll: $acceptAll) {
+    ...Event
+  }
+}

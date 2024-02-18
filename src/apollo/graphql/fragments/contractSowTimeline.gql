@@ -1,0 +1,6 @@
+fragment ContractSowTimeline on ContractSowTimeLine {
+  timestamp
+  userId
+  fromStatus
+  toStatus
+}

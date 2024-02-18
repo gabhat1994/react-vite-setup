@@ -1,0 +1,5 @@
+mutation createMultipleEventInvitation($id: ID!, $userIds: [ID!]!) {
+  createMultipleEventInvitation(_id: $id, userIds: $userIds) {
+    ...EventCurrentUser
+  }
+}

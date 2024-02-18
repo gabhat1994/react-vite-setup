@@ -1,0 +1,9 @@
+mutation updateNoumVisibilitySettings(
+  $spaceId: ID!
+  $visibility: ProjectChamberType!
+) {
+  updateNoumVisibilitySettings(spaceId: $spaceId, visibility: $visibility) {
+    _id
+    projectType
+  }
+}

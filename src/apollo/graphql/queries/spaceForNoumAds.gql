@@ -1,0 +1,8 @@
+query SpaceForNoumAds($campaign: ID!) {
+  getSelectedAdCampaignDetails(campaignId: $campaign) {
+    noumId {
+      ...SpaceForNoumAds
+      _id
+    }
+  }
+}

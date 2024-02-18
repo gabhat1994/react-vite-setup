@@ -1,0 +1,11 @@
+mutation updateNoumCustomPreview(
+  $noumId: ID!
+  $elements: [NoumCustomPreviewElementInput!]
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter = UNPUBLISHED
+) {
+  updateNoumCustomPreview(noumId: $noumId, elements: $elements) {
+    _id
+    ...NoumWithLayout
+  }
+}

@@ -1,0 +1,3 @@
+mutation SendContractForSigning($id: ID!) {
+  sendDocumentForSigning(documentId: $id, type: Contract)
+}

@@ -1,0 +1,9 @@
+query listBlockedCountries($limit: Int, $offset: Int) {
+  listBlockedCountries(limit: $limit, offset: $offset) {
+    count
+    data {
+      name
+      code
+    }
+  }
+}

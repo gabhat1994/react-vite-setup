@@ -1,0 +1,3 @@
+mutation deletePost($_id: ID!) {
+  deletePost(_id: $_id)
+}

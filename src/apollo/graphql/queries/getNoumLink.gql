@@ -1,0 +1,5 @@
+query getNoumLink($noumLinkId: ID!) {
+  getNoumLink(noumLinkId: $noumLinkId) {
+    ...NoumLink
+  }
+}

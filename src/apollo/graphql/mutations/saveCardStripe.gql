@@ -1,0 +1,7 @@
+mutation saveCardStripe($paymentId: String!) {
+  saveCardStripe(paymentId: $paymentId) {
+    id
+    brand
+    last4
+  }
+}

@@ -1,0 +1,32 @@
+query recentNoums($offset: Int, $limit: Int) {
+  recentNoums(offset: $offset, limit: $limit) {
+    data {
+      _id
+      name
+      title
+      type
+      projectType
+      description
+      profileImage
+      followersCount
+      isFavourited
+      status
+      uid {
+        _id
+        firstName
+        lastName
+        title
+        userStatus
+        location
+        profile {
+          profilePicture
+        }
+      }
+      category {
+        _id
+        name
+      }
+    }
+    count
+  }
+}

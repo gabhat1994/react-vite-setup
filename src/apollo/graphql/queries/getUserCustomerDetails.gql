@@ -1,0 +1,12 @@
+query getUserCustomerDetails {
+  getUserCustomerDetails {
+    first_name
+    last_name
+    email
+    uid
+    external_customer_id
+    created_at
+    updated_at
+    status
+  }
+}

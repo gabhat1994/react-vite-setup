@@ -1,0 +1,66 @@
+query getNoumActivityLog(
+  $noumId: ID!
+  $filter: NoumActivityLogFilter
+  $limit: Int
+  $offset: Int
+) {
+  getNoumActivityLog(
+    noumId: $noumId
+    filter: $filter
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...AppActivity
+    }
+  }
+}
+
+fragment AppActivity on AppActivity {
+  _id
+  type
+  sourceUser {
+    ...UserBasicOutput
+  }
+  targetUsers {
+    ...UserBasicOutput
+  }
+  sourceNoum {
+    _id
+    name
+  }
+  targetNoum {
+    _id
+    name
+  }
+  payload {
+    post {
+      _id
+    }
+    noumMember {
+      ...NoumMemberBasic
+    }
+    event {
+      eventId
+      startDate
+      endDate
+      title
+      description
+    }
+    payment {
+      amount
+      currency
+      source
+      destination
+      invoice {
+        id
+        invoiceNumber
+      }
+    }
+    conversation {
+      _id
+    }
+  }
+  createdAt
+}

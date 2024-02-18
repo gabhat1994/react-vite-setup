@@ -1,0 +1,5 @@
+query campaignOfferById($offerId: String!) {
+  getAdCampaignOfferOne(id: $offerId) {
+    ...CampaignOffer
+  }
+}

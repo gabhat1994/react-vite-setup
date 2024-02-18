@@ -1,0 +1,5 @@
+fragment UserRoleOutput on UserRoleOutput {
+  _id
+  roleType
+  permissions
+}

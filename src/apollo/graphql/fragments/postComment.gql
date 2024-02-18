@@ -1,0 +1,48 @@
+fragment PostComment on Comments {
+  _id
+  content
+  createdAt
+  replies {
+    ...ReplyOutput
+  }
+  uid {
+    ...UserBasicOutput
+  }
+  updatedAt
+  tags {
+    uid {
+      ...UserBasicOutput
+    }
+  }
+}
+
+fragment CommentOutput on CommentOutput {
+  _id
+  content
+  createdAt
+  replies {
+    ...ReplyOutput
+  }
+  uid {
+    ...UserBasicOutput
+  }
+  updatedAt
+  tags {
+    uid {
+      ...UserBasicOutput
+    }
+  }
+}
+
+fragment ReplyOutput on ReplyOutput {
+  total
+  firstReply {
+    ...ThreadOutput
+  }
+  total
+  userIdList {
+    _id {
+      ...UserBasicOutput
+    }
+  }
+}

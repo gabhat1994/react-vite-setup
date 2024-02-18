@@ -1,0 +1,7 @@
+query getInvoiceAmount($invoiceId: ID!, $id: ID) {
+  getInvoiceAmount(invoiceId: $invoiceId, id: $id) {
+    amount
+    paidAmount
+    remainingAmount
+  }
+}

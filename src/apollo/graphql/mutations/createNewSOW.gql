@@ -1,0 +1,5 @@
+mutation CreateNewSOW($input: CreateNewSOWInput!) {
+  createNewSOW(input: $input) {
+    ...SOW
+  }
+}

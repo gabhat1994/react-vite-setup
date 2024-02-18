@@ -1,0 +1,8 @@
+query receivedNoumConnectionInvites($limit: Int, $offset: Int) {
+  receivedNoumConnectionInvites(input: { limit: $limit, offset: $offset }) {
+    count
+    data {
+      ...NoumPendingConnection
+    }
+  }
+}

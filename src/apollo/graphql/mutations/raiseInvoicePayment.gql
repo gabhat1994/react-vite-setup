@@ -1,0 +1,7 @@
+mutation raiseInvoicePayment($input: RaiseInvoicePaymentInput!) {
+  raiseInvoicePayment(input: $input) {
+    id
+    paymentId
+    clientSecret
+  }
+}

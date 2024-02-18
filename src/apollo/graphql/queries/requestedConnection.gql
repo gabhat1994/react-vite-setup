@@ -1,0 +1,54 @@
+query requestedConnection(
+  $status: ConnectionRequestStatus
+  $limit: Int
+  $offset: Int
+  $requestFrom: ID
+) {
+  requestedConnection(
+    status: $status
+    limit: $limit
+    offset: $offset
+    requestFrom: $requestFrom
+  ) {
+    count
+    data {
+      requestedAt
+      connectionId: _id
+      requestTo {
+        _id
+        name
+        type
+        profileImage
+        uid {
+          firstName
+          title
+          lastName
+          _id
+          userStatus
+          profile {
+            profilePictureThumbnail
+            profilePicture
+          }
+        }
+      }
+      requestFrom {
+        _id
+        name
+        type
+        profileImage
+        uid {
+          firstName
+          title
+          lastName
+          _id
+          userStatus
+          profile {
+            profilePictureThumbnail
+            profilePicture
+          }
+        }
+      }
+      _id
+    }
+  }
+}

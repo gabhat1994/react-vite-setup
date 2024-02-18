@@ -1,0 +1,26 @@
+query socialHallAttendeesAndGroups(
+  $limit: Int!
+  $offset: Int!
+  $socialHallId: ID!
+) {
+  socialHallAttendee(
+    limit: $limit
+    offset: $offset
+    socialHallId: $socialHallId
+  ) {
+    count
+    data {
+      ...SocialHallAttendee
+    }
+  }
+  socialHallGroups(
+    socialHallId: $socialHallId
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...SocialHallGroup
+    }
+  }
+}

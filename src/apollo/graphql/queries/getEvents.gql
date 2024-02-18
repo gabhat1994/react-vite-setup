@@ -1,0 +1,23 @@
+query GetEvents(
+  $chamberId: ID!
+  $filter: FilterEvents
+  $limit: Int
+  $offset: Int
+  $sortOrder: SortOrder
+) {
+  getEvents(
+    chamberId: $chamberId
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    sortOrder: $sortOrder
+  ) {
+    count
+    meta {
+      ...EventMeta
+    }
+    data {
+      ...Event
+    }
+  }
+}

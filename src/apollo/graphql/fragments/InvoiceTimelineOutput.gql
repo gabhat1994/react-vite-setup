@@ -1,0 +1,22 @@
+fragment InvoiceTimelineOutput on InvoiceTimelineOutput {
+  _id
+  invoiceId
+  paidAmount
+  amount
+  remainingAmount
+  previousPaidAmount
+  activityType
+  dueDateFrom
+  dueDateTo
+  duplicatedFrom
+  fromStatus
+  toStatus
+  userId {
+    _id
+    firstName
+    lastName
+    middleName
+    userStatus
+  }
+  createdAt
+}

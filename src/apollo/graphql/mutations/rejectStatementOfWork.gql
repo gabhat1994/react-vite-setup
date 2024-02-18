@@ -1,0 +1,3 @@
+mutation RejectStatementOfWork($id: ID!) {
+  rejectSow(documentId: $id)
+}

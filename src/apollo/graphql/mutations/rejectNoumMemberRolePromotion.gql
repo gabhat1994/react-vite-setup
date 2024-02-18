@@ -1,0 +1,3 @@
+mutation rejectNoumMemberRolePromotion($noumId: ID!) {
+  rejectNoumMemberRolePromotion(noumId: $noumId)
+}

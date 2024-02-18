@@ -1,0 +1,8 @@
+query getInvoiceList($filter: InvoiceQueryInput!) {
+  getInvoiceList(filter: $filter) {
+    data {
+      ...InvoiceOutput
+    }
+    count
+  }
+}

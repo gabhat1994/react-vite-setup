@@ -1,0 +1,5 @@
+mutation removeInitiateMicroDepositDwolla($id: String!) {
+  removeInitiateMicroDepositDwolla(id: $id) {
+    ...AccountListOutput
+  }
+}

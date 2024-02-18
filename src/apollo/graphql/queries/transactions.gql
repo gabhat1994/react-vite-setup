@@ -1,0 +1,8 @@
+query transactions($filter: PaymentFilter, $limit: Int!, $page: Int!) {
+  payments(filter: $filter, limit: $limit, page: $page) {
+    count
+    data {
+      ...Transactions
+    }
+  }
+}

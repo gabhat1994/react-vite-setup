@@ -1,0 +1,5 @@
+query campaignSummary($campaignId: ID!) {
+  getSelectedAdCampaignDetails(campaignId: $campaignId) {
+    ...CampaignSummary
+  }
+}

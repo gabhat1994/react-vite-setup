@@ -1,0 +1,9 @@
+mutation updateUserAddress($input: AddressInput) {
+  addUserAddress(input: $input) {
+    street
+    apartment
+    zipcode
+    state
+    city
+  }
+}

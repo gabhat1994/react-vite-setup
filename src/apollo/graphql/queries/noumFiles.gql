@@ -1,0 +1,8 @@
+query noumFiles($input: GetNoumFilesInput!) {
+  noumFiles(input: $input) {
+    data {
+      ...NoumFile
+    }
+    count
+  }
+}

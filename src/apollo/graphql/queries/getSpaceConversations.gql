@@ -1,0 +1,9 @@
+query getSpaceConversations($spaceId: ID!, $limit: Int, $offset: Int) {
+  getSpaceConversations(spaceId: $spaceId, limit: $limit, offset: $offset) {
+    count
+    unreadMessageCount
+    data {
+      ...ConversationOutput
+    }
+  }
+}

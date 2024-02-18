@@ -1,0 +1,5 @@
+mutation UpdateEventStatus($id: ID!, $status: EventsStatus!) {
+  updateEventStatus(_id: $id, status: $status) {
+    ...Event
+  }
+}

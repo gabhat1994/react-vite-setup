@@ -1,0 +1,6 @@
+subscription knockUpdates($socialHallId: ID) {
+  knockUpdates(socialHallId: $socialHallId) {
+    _id
+    event
+  }
+}

@@ -1,0 +1,3 @@
+mutation RemoveCalendar($chamberId: ID!) {
+  removeCalendar(chamberId: $chamberId)
+}

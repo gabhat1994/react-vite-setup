@@ -1,0 +1,8 @@
+query getInvoiceTimeLines($invoiceId: ID!, $limit: Int, $offset: Int) {
+  getInvoiceTimeLines(invoiceId: $invoiceId, limit: $limit, offset: $offset) {
+    data {
+      ...InvoiceTimelineOutput
+    }
+    count
+  }
+}

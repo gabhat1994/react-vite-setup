@@ -1,0 +1,14 @@
+query GetStatementOfWorkPdf($id: ID!) {
+  getSingleSOW(_id: $id) {
+    _id
+    sowPDF {
+      base64
+    }
+  }
+}
+
+query GetStatementOfWorkPdfWithSignature($id: ID!, $contactId: ID!) {
+  previewWithSign(entity: SOW, _id: $id, contactId: $contactId) {
+    base64
+  }
+}

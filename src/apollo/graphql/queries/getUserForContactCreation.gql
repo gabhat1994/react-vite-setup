@@ -1,0 +1,18 @@
+query GetUserForContactCreation($id: ID!) {
+  user(_id: $id) {
+    _id
+    userStatus
+    firstName
+    lastName
+    email
+    title
+    location
+    profile {
+      _id
+      profilePictureThumbnail
+    }
+    userAddress {
+      ...UserAddress
+    }
+  }
+}

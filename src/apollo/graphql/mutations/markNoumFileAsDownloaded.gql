@@ -1,0 +1,3 @@
+mutation markNoumFileAsDownloaded($fileId: ID!) {
+  markNoumFileAsDownloaded(fileId: $fileId)
+}

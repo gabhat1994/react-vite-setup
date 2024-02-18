@@ -1,0 +1,25 @@
+fragment NoumAuthorization on SpaceOutput {
+  _id
+  assignedRole {
+    ...NoumRoleForAuthorization
+  }
+}
+
+fragment NoumRoleForAuthorization on NoumRole {
+  _id
+  name
+  isDefault
+  status
+  groupedPermissions {
+    ...NoumRolePermissionGroupForAuthorization
+  }
+}
+
+fragment NoumRolePermissionGroupForAuthorization on NoumRolePermissionGroup {
+  level
+  elementType
+  permissions {
+    id
+    isActive
+  }
+}

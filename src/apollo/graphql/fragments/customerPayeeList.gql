@@ -1,0 +1,17 @@
+fragment CustomerPayeeList on CustomerPayeeList {
+  id
+  customerName
+  maskAccountNumber
+  accountType
+  subAccountType
+  walletName
+  accountId
+  chamberId
+  userId {
+    _id
+    profile {
+      _id
+      profilePicture
+    }
+  }
+}

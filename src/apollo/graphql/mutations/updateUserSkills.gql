@@ -1,0 +1,14 @@
+mutation updateUserSkills($input: [ID!]) {
+  updateUserSkills(input: $input) {
+    location
+    profileCompletion {
+      name
+      value
+    }
+    skillOwn
+    skillSought
+    uid {
+      ...User
+    }
+  }
+}

@@ -1,0 +1,11 @@
+fragment ElementInnerOutput on ElementInnerOutput {
+  bodyContent
+  headerContent
+  position
+  isDeleted
+  bodyContentJson
+  percentCompleted
+  customPreviewPosition
+  isCustomPreviewVisible
+  meta
+}

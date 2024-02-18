@@ -1,0 +1,5 @@
+query getConnectionById($connectionId: ID!) {
+  getConnectionById(connectionId: $connectionId) {
+    ...SpaceConnectionBasic
+  }
+}

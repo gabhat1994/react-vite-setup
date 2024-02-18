@@ -1,0 +1,30 @@
+query allUsersWithOwner(
+  $filter: SearchUserFilter
+  $limit: Int
+  $offset: Int
+  $search: String
+  $type: UserRelationType
+  $activeUserOnly: Boolean
+  $chamberId: ID
+  $ownerID: ID!
+  $oldConnectionFlow: Boolean
+) {
+  allUsers(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    search: $search
+    type: $type
+    activeUserOnly: $activeUserOnly
+    chamberId: $chamberId
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    count
+    data {
+      ...UserOutput
+    }
+  }
+  user(_id: $ownerID) {
+    ...UserOutput
+  }
+}

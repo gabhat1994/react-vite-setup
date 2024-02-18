@@ -1,0 +1,9 @@
+mutation applyForRiseApplication($noumId: ID!) {
+  applyForRiseApplication(noumId: $noumId) {
+    data {
+      _id
+      name
+    }
+    alredayCreated
+  }
+}

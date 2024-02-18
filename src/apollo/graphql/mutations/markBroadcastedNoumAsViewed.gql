@@ -1,0 +1,3 @@
+mutation markBroadcastedNoumAsViewed($spaceId: ID!) {
+  markBroadcastedNoumAsViewed(spaceId: $spaceId)
+}

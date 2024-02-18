@@ -1,0 +1,53 @@
+fragment UserDetailsOfTransaction on UserOutput {
+  _id
+  firstName
+  lastName
+  userStatus
+  profile {
+    _id
+    profilePicture
+  }
+}
+
+fragment AccountDetailsOfTransaction on TransferDetail {
+  name
+  accountType
+  accountName
+  maskNumber
+  chamber {
+    _id
+    profileImage
+    name
+  }
+}
+
+fragment Transactions on PaymentOutput {
+  id
+  amount
+  charges
+  netAmount
+  createUserId
+  updatedUserId
+  transactionReason
+  paymentDate
+  currency
+  createdAt
+  paymentStatus
+  paymentId
+
+  sourceUser {
+    ...UserDetailsOfTransaction
+  }
+
+  destinationUser {
+    ...UserDetailsOfTransaction
+  }
+
+  sourceDetail {
+    ...AccountDetailsOfTransaction
+  }
+
+  destinationDetail {
+    ...AccountDetailsOfTransaction
+  }
+}

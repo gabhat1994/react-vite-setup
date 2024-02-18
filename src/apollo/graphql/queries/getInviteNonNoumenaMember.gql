@@ -1,0 +1,8 @@
+query getInviteNonNoumenaMember($noumId: ID!) {
+  getinviteNonNoumenaMember(noumId: $noumId) {
+    data {
+      ...InviteNonNoumUserOutput
+    }
+    count
+  }
+}

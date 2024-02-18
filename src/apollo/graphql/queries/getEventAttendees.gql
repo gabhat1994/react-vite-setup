@@ -1,0 +1,17 @@
+query GetEventAttendees(
+  $id: ID!
+  $filter: EventAttendeesFilter
+  $limit: Int
+  $offset: Int
+) {
+  getEventAttendees(_id: $id, filter: $filter, limit: $limit, offset: $offset) {
+    count
+    meta {
+      pendingCount
+      attendeesCount
+    }
+    data {
+      ...Attendees
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation getOrCreateSpaceConversation($spaceId: ID!, $userIds: [ID]) {
+  getOrCreateSpaceConversation(spaceId: $spaceId, userIds: $userIds) {
+    ...ConversationOutput
+  }
+}

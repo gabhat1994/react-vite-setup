@@ -1,0 +1,15 @@
+query getConnectedNoums(
+  $filter: ProjectChamberFilter
+  $sort: SortType
+  $limit: Int!
+  $offset: Int!
+) {
+  connectedNoums(
+    input: { filter: $filter, sort: $sort, limit: $limit, offset: $offset }
+  ) {
+    count
+    data {
+      ...SpaceForList
+    }
+  }
+}

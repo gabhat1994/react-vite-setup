@@ -1,0 +1,6 @@
+mutation updateCustomerDocument($input: UpdateCustomerDocumentInput!) {
+  updateCustomerDocument(input: $input) {
+    type
+    status
+  }
+}

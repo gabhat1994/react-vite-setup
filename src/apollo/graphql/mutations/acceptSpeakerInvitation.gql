@@ -1,0 +1,15 @@
+mutation acceptSpeakerInvitation($groupId: ID!) {
+  acceptSpeakerInvitation(groupId: $groupId) {
+    _id
+    invitedAsSpeakers {
+      invitee {
+        _id
+        firstName
+      }
+      inviter {
+        _id
+        firstName
+      }
+    }
+  }
+}

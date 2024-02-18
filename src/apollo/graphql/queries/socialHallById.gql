@@ -1,0 +1,6 @@
+query socialHallById($id: ID) {
+  socialHallById(id: $id) {
+    _id
+    eventId
+  }
+}

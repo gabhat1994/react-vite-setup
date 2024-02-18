@@ -1,0 +1,5 @@
+mutation UpdateSOW($id: ID!, $input: UpdateSOWInput!) {
+  updateSOW(SOWId: $id, input: $input) {
+    ...SOW
+  }
+}

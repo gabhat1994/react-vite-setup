@@ -1,0 +1,9 @@
+query payAsYouGoSetupCounters(
+  $noumDetailInput: NoumTransactionDetailInputType!
+) {
+  getNoumTransactionFeeDetails(noumDetailInput: $noumDetailInput) {
+    subscription_id {
+      ...NoumSetupCounter
+    }
+  }
+}

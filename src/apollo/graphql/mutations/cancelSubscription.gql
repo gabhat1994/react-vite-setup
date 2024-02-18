@@ -1,0 +1,3 @@
+mutation cancelSubscription($subscription_id: Float!, $reason: String) {
+  cancelSubscription(subscription_id: $subscription_id, reason: $reason)
+}

@@ -1,0 +1,32 @@
+query getNoumLinkConnections(
+  $limit: Int
+  $offset: Int
+  $noumLinkId: ID = ""
+  $sort: SortType
+) {
+  getNoumLinkConnections(
+    limit: $limit
+    offset: $offset
+    noumLinkId: $noumLinkId
+    sort: $sort
+  ) {
+    data {
+      _id
+      type
+      name
+      approvedAt
+      uid {
+        _id
+        firstName
+        lastName
+        title
+        profile {
+          profilePictureThumbnail
+          profilePicture
+        }
+      }
+      lastUpdatedAt
+    }
+    count
+  }
+}

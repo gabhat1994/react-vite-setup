@@ -1,0 +1,38 @@
+mutation handleFollow(
+  $action: FollowActionEnum!
+  $spaceId: ID!
+  $source: FollowSource
+) {
+  handleFollow(action: $action, spaceId: $spaceId, source: $source) {
+    _id
+    isFollowing
+    connectionId
+    followersCount
+    elements {
+      _id
+      bodyContent
+      bodyContentJson
+      bodyContentType
+      draft {
+        bodyContent
+        bodyContentJson
+        headerContent
+        isDeleted
+        position
+      }
+      elementType
+      headerContent
+      position
+      status
+      tempStatus
+      unSaved {
+        bodyContent
+        bodyContentJson
+        headerContent
+        isDeleted
+        position
+      }
+      viewOnly
+    }
+  }
+}

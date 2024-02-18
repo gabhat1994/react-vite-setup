@@ -1,0 +1,10 @@
+query getUserSubmittedOnboardingQuestionsAndAnswers($userId: ID) {
+  getUserSubmittedOnboardingQuestionsAndAnswers(userId: $userId) {
+    userId
+    userSelection {
+      _id
+      questionId
+      answer
+    }
+  }
+}

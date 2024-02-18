@@ -1,0 +1,19 @@
+mutation updateConnectionPermission($input: ConnectionPermissionInput!) {
+  updateConnectionPermission(input: $input) {
+    _id
+    status
+    requestedAt
+    permission
+    draft {
+      permission
+    }
+    requestTo {
+      _id
+      name
+    }
+    requestFrom {
+      _id
+      name
+    }
+  }
+}

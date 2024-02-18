@@ -1,0 +1,5 @@
+query getAccountById($id: String!) {
+  getAccountById(id: $id) {
+    ...AccountListOutput
+  }
+}

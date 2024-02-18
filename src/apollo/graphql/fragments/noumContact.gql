@@ -1,0 +1,71 @@
+fragment NoumContactBasic on NoumContactOutput {
+  _id
+  displayName
+  userId {
+    _id
+    userStatus
+    profile {
+      _id
+      profilePictureThumbnail
+    }
+  }
+}
+
+fragment NoumContact on NoumContactOutput {
+  ...NoumContactSummary
+  createdAt
+  isConnectedWithNoum
+  status
+  ownerId {
+    _id
+  }
+}
+
+fragment NoumContactSummary on NoumContactOutput {
+  ...NoumContactBasic
+  title
+  companyName
+  street
+  city
+  country
+  zipCode
+  state
+  apartmentNo
+  country
+  userId {
+    ...NoumContactUser
+  }
+}
+
+fragment SearchableNoumContact on SearchableNoumContact {
+  _id
+  fullName
+  displayName
+  email
+  title
+  companyName
+  street
+  status
+  apartmentNo
+  city
+  zipCode
+  state
+  country
+  createdAt
+  isConnectedWithNoum
+  user {
+    ...NoumContactUser
+  }
+}
+
+fragment NoumContactUser on UserOutput {
+  _id
+  firstName
+  lastName
+  userStatus
+  email
+  profile {
+    _id
+    profilePictureThumbnail
+  }
+}

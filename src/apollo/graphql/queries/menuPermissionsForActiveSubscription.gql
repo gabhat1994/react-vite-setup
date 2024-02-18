@@ -1,0 +1,7 @@
+query menuPermissionsForActiveSubscription($homeNoumId: String!) {
+  getSubscriptionPermissionsAndHomeNoumCounters(homeNoumId: $homeNoumId) {
+    data {
+      permissions
+    }
+  }
+}

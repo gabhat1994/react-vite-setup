@@ -1,0 +1,5 @@
+mutation inviteNonNoumenaMember($input: NMUserInput) {
+  inviteNonNoumenaMember(input: $input) {
+    id
+  }
+}

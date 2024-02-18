@@ -1,0 +1,126 @@
+mutation updateSpace($id: ID!, $input: SpaceUpdateInput) {
+  updateSpace(id: $id, input: $input) {
+    _id
+    enableAds
+    adsMeta
+    keywords
+    slug
+    description
+    elements {
+      _id
+      bodyContent
+      bodyContentJson
+      bodyContentType
+      draft {
+        bodyContent
+        bodyContentJson
+        headerContent
+        isDeleted
+        position
+      }
+      elementType
+      headerContent
+      position
+      status
+      tempStatus
+      unSaved {
+        bodyContent
+        bodyContentJson
+        headerContent
+        isDeleted
+        position
+      }
+      viewOnly
+    }
+    institution
+    name
+    networks {
+      _id
+      accessToken
+      connectionType
+      expiryDate
+      isActive
+      userId
+    }
+    permission
+    profileImage
+    status
+    title
+    token {
+      ...Token
+    }
+    type
+    uid {
+      SocialHallTCAccepted
+      _id
+      ageGroup {
+        max
+        min
+      }
+      bio
+      citizenship
+      connection
+      connections {
+        userid
+      }
+      createdAt
+      creditCheckResult
+      email
+      firstName
+      freelancingExperience {
+        max
+        min
+      }
+      kycResult
+      lastLoginAt
+      lastName
+      location
+      metadata {
+        additionalInfo
+        changeOn
+        changedBy
+        moreInfo
+        reason
+        statusFrom
+        statusTo
+      }
+      middleName
+      phone
+      profile {
+        _id
+        profilePicture
+        profilePictureThumbnail
+      }
+      profileUrl
+      referralCode
+      roles {
+        _id
+        permissions
+        roleType
+      }
+      skills {
+        _id
+        icon
+        name
+      }
+      status
+      title
+      unreadConnectionCount
+      updatedAt
+      userOwnReferralCode
+      userStatus
+      username
+      visibility {
+        email
+        location
+        phone
+      }
+      visibleTo {
+        userid
+      }
+    }
+    category {
+      _id
+    }
+  }
+}

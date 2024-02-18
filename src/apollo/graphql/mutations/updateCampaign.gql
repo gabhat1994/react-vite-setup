@@ -1,0 +1,5 @@
+mutation updateCampaign($input: UpdateAdCampaignInput) {
+  updateAdCampaign(input: $input) {
+    status
+  }
+}

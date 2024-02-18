@@ -1,0 +1,5 @@
+mutation createCustomerPayee($input: CreateCustomerPayee!) {
+  createCustomerPayee(input: $input) {
+    message
+  }
+}

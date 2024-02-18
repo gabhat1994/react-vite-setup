@@ -1,0 +1,10 @@
+query campaignFilters($input: AdCampaignSettingsInput) {
+  status: getAdCampaignSettings(input: $input) {
+    settingsValue
+  }
+  noums: getDistinctNoumAdCampaigns {
+    noumId {
+      ...NoumDropDownList
+    }
+  }
+}

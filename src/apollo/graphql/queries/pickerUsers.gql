@@ -1,0 +1,45 @@
+query PickerUsers(
+  $search: String
+  $chamberId: ID
+  $connectedLimit: Int
+  $connectedOffset: Int
+  $limit: Int
+  $offset: Int
+  $userStatuses: [GlobalSearchUserEntityStatus!]
+  $fetchAll: Boolean!
+  $oldConnectionFlow: Boolean
+) {
+  connected: allUsers(
+    search: $search
+    chamberId: $chamberId
+    limit: $connectedLimit
+    offset: $connectedOffset
+    type: CONNECTED
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    ...EventAllUsers
+  }
+  other: globalSearch(
+    query: $search
+    entityType: HomeNoum
+    offset: $offset
+    limit: $limit
+    userStatuses: $userStatuses
+  ) @include(if: $fetchAll) {
+    count
+    data {
+      id
+      user {
+        id
+        firstName
+        lastName
+        middleName
+        title
+        thumbnailUrl
+      }
+      chamber: noum {
+        isConnected
+      }
+    }
+  }
+}

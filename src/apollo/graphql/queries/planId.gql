@@ -1,0 +1,7 @@
+query planId {
+  getAvailableSubscriptions {
+    item_price_id
+    plan_category
+    subscription_id
+  }
+}

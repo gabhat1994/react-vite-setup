@@ -1,0 +1,24 @@
+query getNoumReferences(
+  $experienceId: ID!
+  $limit: Int
+  $offset: Int
+  $status: [NoumReferenceStatus]
+) {
+  getNoumReferences(
+    experienceId: $experienceId
+    limit: $limit
+    offset: $offset
+    status: $status
+  ) {
+    count
+    data {
+      _id
+      capacity
+      experienceId
+      imageUrl
+      providerName
+      referenceText
+      status
+    }
+  }
+}

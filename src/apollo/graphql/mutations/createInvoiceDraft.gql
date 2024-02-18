@@ -1,0 +1,5 @@
+mutation createInvoiceDraft($input: InvoiceDraftInput) {
+  createInvoiceDraft(input: $input) {
+    ...InvoiceOutput
+  }
+}

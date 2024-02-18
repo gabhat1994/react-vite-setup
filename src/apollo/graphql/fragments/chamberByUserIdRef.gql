@@ -1,0 +1,9 @@
+fragment ChamberByUserIdRef on ChamberByUserIdRef {
+  userId
+  _id
+  uid {
+    ...UserBasicOutput
+  }
+  type
+  name
+}

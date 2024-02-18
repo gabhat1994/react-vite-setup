@@ -1,0 +1,5 @@
+mutation createNoumLayoutSection($input: CreateNoumLayoutSectionInput!) {
+  createNoumLayoutSection(input: $input) {
+    ...NoumLayoutSection
+  }
+}

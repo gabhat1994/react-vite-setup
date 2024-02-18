@@ -1,0 +1,6 @@
+query uploadDocument($input: uploadDcoumentInput!) {
+  uploadCustomerDocuments(input: $input) {
+    url
+    documentName
+  }
+}

@@ -1,0 +1,5 @@
+query getConversationByCid($cid: String) {
+  getConversationByCid(cid: $cid) {
+    ...ConversationOutput
+  }
+}

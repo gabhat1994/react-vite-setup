@@ -1,0 +1,3 @@
+mutation markSearchEntityAsClicked($markSearchEntityAsClickedId: ID!) {
+  markSearchEntityAsClicked(id: $markSearchEntityAsClickedId)
+}

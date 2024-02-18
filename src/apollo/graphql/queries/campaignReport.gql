@@ -1,0 +1,14 @@
+query campaignReport($campaignId: ID!, $reportId: String!) {
+  campaign: getSelectedAdCampaignDetails(campaignId: $campaignId) {
+    title
+    createdAt
+    adId
+    createdBy {
+      firstName
+    }
+  }
+
+  report: getAdCampaignReportOne(id: $reportId) {
+    ...CampaignReport
+  }
+}

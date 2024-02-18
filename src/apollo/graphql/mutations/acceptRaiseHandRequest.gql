@@ -1,0 +1,8 @@
+mutation acceptRaiseHandRequest($groupId: ID!, $requestedByUserId: ID!) {
+  acceptRaiseHandRequest(
+    groupId: $groupId
+    requestedByUserId: $requestedByUserId
+  ) {
+    _id
+  }
+}

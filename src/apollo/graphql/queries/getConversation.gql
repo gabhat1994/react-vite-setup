@@ -1,0 +1,5 @@
+query getConversation($userIds: [ID], $spaceId: ID) {
+  getConversation(userIds: $userIds, spaceId: $spaceId) {
+    cid
+  }
+}

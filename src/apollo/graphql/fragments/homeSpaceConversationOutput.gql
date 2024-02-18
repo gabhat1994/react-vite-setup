@@ -1,0 +1,20 @@
+fragment HomeSpaceConversationOutput on HomeSpaceConversationOutput {
+  groupConversations {
+    ...ConversationOutput
+  }
+  groupConversationsCount
+  groupConversationsUnreadMessageCount
+  groupUnreadConversationCount
+  privateConversation {
+    ...ConversationOutput
+  }
+  privateConversationCount
+  privateUnreadMessageCount
+  privateUnreadCoversationCount
+  userConversations {
+    ...ConversationOutput
+  }
+  userConversationsCount
+  userAllConversationUnreadMessageCount
+  userAllConversationUnreadConversationCount
+}

@@ -1,0 +1,23 @@
+mutation sendConnectionInvite(
+  $ownSpaceId: ID!
+  $invitedSpaceId: ID!
+  $message: String
+) {
+  sendConnectionInvite(
+    ownSpaceId: $ownSpaceId
+    invitedSpaceId: $invitedSpaceId
+    message: $message
+  ) {
+    _id
+    requestedAt
+    approvedAt
+    status
+    permission
+    requestTo {
+      _id
+    }
+    requestFrom {
+      _id
+    }
+  }
+}

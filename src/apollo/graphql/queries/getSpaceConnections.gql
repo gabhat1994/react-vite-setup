@@ -1,0 +1,5 @@
+query getSpaceConnections($spaceId: ID!, $status: ConnectionRequestTypeEnum) {
+  getSpaceConnections(spaceId: $spaceId, status: $status) {
+    ...SpaceConnectionForNotification
+  }
+}

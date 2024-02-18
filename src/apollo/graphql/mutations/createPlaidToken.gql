@@ -1,0 +1,5 @@
+mutation createPlaidLink {
+  createPlaidLink {
+    link_token
+  }
+}

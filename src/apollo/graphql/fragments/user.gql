@@ -1,0 +1,69 @@
+fragment User on User {
+  _id
+  firstName
+  middleName
+  lastName
+  username
+  email
+  userStatus
+  phone
+  dob
+  referralCode
+  createdAt
+  isAcceptedSkipMediaTesting
+  location
+  title
+  bio
+  userSocialHall {
+    ...UserSocialHall
+  }
+  roles {
+    ...UserRoleOutput
+  }
+  credentials {
+    providerType
+  }
+  profile {
+    ...UserProfile
+  }
+  freelancingExperience {
+    ...MaxMinValue
+  }
+  metadata {
+    ...LogsOutput
+  }
+  ageGroup {
+    ...MaxMinValue
+  }
+  chamber {
+    _id
+    userId
+  }
+  skills {
+    ...Skill
+  }
+}
+
+fragment UserProfile on Profile {
+  _id
+  profilePicture
+  profilePictureThumbnail
+  socialLinks {
+    ...SocialLink
+  }
+}
+
+fragment UserSocialHall on UserSocialHall {
+  _id
+  name
+  type
+  isActive
+}
+
+fragment UserAddress on AddressOutput {
+  street
+  apartment
+  city
+  zipcode
+  state
+}

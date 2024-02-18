@@ -1,0 +1,7 @@
+fragment EventMeta on EventMeta {
+  allEventsCount
+  hostedEventsCount
+  pendingEventsCount
+  acceptedEventsCount
+  pastEventsCount
+}

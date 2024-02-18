@@ -1,0 +1,5 @@
+mutation unlinkNoums($noumLinkId: ID!, $linkedNoumIDs: [ID!]!) {
+  unlinkNoums(noumLinkId: $noumLinkId, linkedNoumIDs: $linkedNoumIDs) {
+    ...NoumLink
+  }
+}

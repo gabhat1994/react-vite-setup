@@ -1,0 +1,5 @@
+mutation updateInvoiceStatus($id: ID!, $status: InvoiceStatusEnumInput) {
+  updateInvoiceStatus(id: $id, status: $status) {
+    ...InvoiceOutput
+  }
+}

@@ -1,0 +1,8 @@
+fragment NetworkOutput on NetworkOutput {
+  _id
+  accessToken
+  connectionType
+  expiryDate
+  isActive
+  userId
+}

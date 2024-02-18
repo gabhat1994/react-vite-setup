@@ -1,0 +1,7 @@
+query GetCookieConsent($cookieConsentId: String!) {
+  getCookieConsent(cookieConsentId: $cookieConsentId) {
+    cookieConsentId
+    cookieConsent
+    createdAt
+  }
+}

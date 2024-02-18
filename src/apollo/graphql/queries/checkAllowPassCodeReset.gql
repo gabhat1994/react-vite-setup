@@ -1,0 +1,5 @@
+query allowPassCodeReset {
+  allowPassCodeReset {
+    allowReset
+  }
+}

@@ -1,0 +1,12 @@
+mutation deleteUserInvoiceLineItem($_id: ID!) {
+  deleteUserInvoiceLineItem(_id: $_id) {
+    id
+    description
+    quantity
+    unitPrice
+    taxRate
+    taxLabel
+    currency
+    amount
+  }
+}

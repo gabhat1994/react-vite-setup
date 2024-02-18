@@ -1,0 +1,10 @@
+query capitalquotient {
+  getSpaceByType(type: HOME) {
+    _id
+  }
+  capitalquotient {
+    getNoumenaScore {
+      ...NoumenaScore
+    }
+  }
+}

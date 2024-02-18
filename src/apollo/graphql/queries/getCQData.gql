@@ -1,0 +1,7 @@
+query getCQData {
+  capitalquotient {
+    getCQDetails {
+      ...CQFormOutput
+    }
+  }
+}

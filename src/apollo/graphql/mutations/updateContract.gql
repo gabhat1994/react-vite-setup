@@ -1,0 +1,5 @@
+mutation UpdateContract($id: ID!, $input: ContractInput!) {
+  updateContract(contractId: $id, input: $input) {
+    ...Contract
+  }
+}

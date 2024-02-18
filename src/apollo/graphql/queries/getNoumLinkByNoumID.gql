@@ -1,0 +1,9 @@
+query getNoumLinkByNoumId($noumId: ID!) {
+  getNoumLinkByNoumId: getSpaceById(id: $noumId) {
+    _id
+    __typename
+    link {
+      ...NoumLink
+    }
+  }
+}

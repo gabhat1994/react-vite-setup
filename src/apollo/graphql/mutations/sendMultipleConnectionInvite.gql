@@ -1,0 +1,54 @@
+mutation sendMultipleConnectionInvite(
+  $ownSpaceId: ID!
+  $invitedSpaceIds: [ID!]!
+  $message: String
+) {
+  sendMultipleConnectionInvite(
+    ownSpaceId: $ownSpaceId
+    invitedSpaceIds: $invitedSpaceIds
+    message: $message
+  ) {
+    _id
+    requestedAt
+    approvedAt
+    status
+    permission
+    status
+    requestTo {
+      _id
+      name
+      projectType
+      permission
+      uid {
+        _id
+        firstName
+        middleName
+        lastName
+        email
+        title
+        profile {
+          profilePicture
+          profilePictureThumbnail
+        }
+      }
+    }
+    requestFrom {
+      _id
+      name
+      projectType
+      permission
+      uid {
+        _id
+        firstName
+        middleName
+        lastName
+        email
+        title
+        profile {
+          profilePicture
+          profilePictureThumbnail
+        }
+      }
+    }
+  }
+}

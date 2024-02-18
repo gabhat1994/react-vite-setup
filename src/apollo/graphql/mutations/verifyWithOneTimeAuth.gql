@@ -1,0 +1,7 @@
+mutation verifyWithOneTimeAuth($token: ID) {
+  verifyWithOneTimeAuth(token: $token) {
+    accessToken
+    email
+    refreshToken
+  }
+}

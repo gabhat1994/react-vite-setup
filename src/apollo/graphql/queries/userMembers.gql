@@ -1,0 +1,20 @@
+query userMembers(
+  $status: NoumMemberStatus
+  $statuses: [NoumMemberStatus!]
+  $limit: Int
+  $offset: Int
+) {
+  userMembers(
+    input: {
+      status: $status
+      statuses: $statuses
+      limit: $limit
+      offset: $offset
+    }
+  ) {
+    count
+    data {
+      ...NoumMemberForUserMembers
+    }
+  }
+}

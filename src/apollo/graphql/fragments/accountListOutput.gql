@@ -1,0 +1,45 @@
+fragment AccountListOutput on AccountListOutput {
+  id
+  masterWalletId
+  status
+  microDeposits {
+    id
+    amount1 {
+      ...CurrencyOutput
+    }
+    amount2 {
+      ...CurrencyOutput
+    }
+    status
+  }
+  customerName
+  walletName
+  balance
+  paymentChannel
+  accountType
+  accountName
+  chamberId
+  chamber {
+    _id
+    profileImage
+    uid {
+      _id
+    }
+  }
+  userId {
+    _id
+    profile {
+      _id
+      profilePicture
+    }
+  }
+  primary
+  maskAccountNumber
+  createdAt
+  updatedAt
+}
+
+fragment CurrencyOutput on CurrencyOutput {
+  value
+  currency
+}

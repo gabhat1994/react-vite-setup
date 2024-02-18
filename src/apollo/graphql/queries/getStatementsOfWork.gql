@@ -1,0 +1,18 @@
+query GetStatementsOfWork(
+  $filter: GetAllSOWFilter
+  $limit: Int
+  $offset: Int
+  $viewingAs: ContractListingPOV!
+) {
+  getAllSOW(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    viewingAs: $viewingAs
+  ) {
+    count
+    data {
+      ...SOWBasic
+    }
+  }
+}

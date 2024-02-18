@@ -1,0 +1,5 @@
+mutation removeNoumFromSubscription($noumInput: NoumTransactionInputType!) {
+  addRemoveNoumSubscription(noumInput: $noumInput) {
+    status
+  }
+}

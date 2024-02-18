@@ -1,0 +1,34 @@
+query getFeaturedNoums($offset: Int, $limit: Int) {
+  getFeaturedNoums(offset: $offset, limit: $limit) {
+    data {
+      _id
+      broadcastedAt
+      broadcastEndedAt
+      name
+      title
+      type
+      projectType
+      description
+      profileImage
+      followersCount
+      isFavourited
+      status
+      uid {
+        _id
+        firstName
+        lastName
+        title
+        userStatus
+        location
+        profile {
+          profilePicture
+        }
+      }
+      category {
+        _id
+        name
+      }
+    }
+    count
+  }
+}

@@ -1,0 +1,3 @@
+query checkIfSlugExists($slug: String!) {
+  checkIfSlugExists(slug: $slug)
+}

@@ -1,0 +1,24 @@
+mutation changeProjectChamberStatus($spaceId: ID!, $status: SpaceStatusEnum) {
+  changeProjectChamberStatus(spaceId: $spaceId, status: $status) {
+    ...SpaceBasic
+    _id
+    status
+    tempStatus
+    name
+    title
+    description
+    profileImage
+    institution
+    type
+    permission
+    projectType
+    unSaved {
+      ...SpaceDraftData
+    }
+    draft {
+      ...SpaceDraftData
+    }
+    updatedAt
+    publishedAt
+  }
+}

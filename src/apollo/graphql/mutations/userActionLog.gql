@@ -1,0 +1,11 @@
+mutation markNotificationsAsViewed($date: Date!) {
+  updateUserActionLog(input: { lastCheckedNotificationsDate: $date }) {
+    lastCheckedNotificationsDate
+  }
+}
+
+mutation markConversationsAsViewed($date: Date!) {
+  updateUserActionLog(input: { lastCheckedMessagesDate: $date }) {
+    lastCheckedMessagesDate
+  }
+}

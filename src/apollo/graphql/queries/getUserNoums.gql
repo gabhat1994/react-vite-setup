@@ -1,0 +1,23 @@
+query getUserNoums(
+  $limit: Int
+  $offset: Int
+  $uid: ID
+  $filter: UserNoumsFilter
+) {
+  getUserNoums(offset: $offset, limit: $limit, uid: $uid, filter: $filter) {
+    count
+    data {
+      _id
+      name
+      title
+      profileImage
+      uid {
+        _id
+      }
+      category {
+        name
+        _id
+      }
+    }
+  }
+}

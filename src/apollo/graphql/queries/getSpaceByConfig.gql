@@ -1,0 +1,7 @@
+query getSpaceConfig($type: SpaceTypeEnum!) {
+  getSpaceConfig(type: $type) {
+    id
+    name
+    value
+  }
+}

@@ -1,0 +1,13 @@
+query GetUnlinkedSOWs($noumId: ID!, $limit: Int = 100, $offset: Int = 0) {
+  getAllSOW(
+    viewingAs: OWNER
+    filter: { unlinked: true, noumIds: [$noumId] }
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...SOWBasic
+    }
+  }
+}

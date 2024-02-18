@@ -1,0 +1,18 @@
+query getRepliesByCommentId(
+  $commentId: ID
+  $limit: Int
+  $offset: Int
+  $sortOrder: SortOperator
+) {
+  getRepliesByCommentId(
+    commentId: $commentId
+    limit: $limit
+    offset: $offset
+    sortOrder: $sortOrder
+  ) {
+    count
+    data {
+      ...ThreadOutput
+    }
+  }
+}

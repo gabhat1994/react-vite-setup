@@ -1,0 +1,5 @@
+mutation getOrCreateConversation($_id: ID, $userIds: [ID]) {
+  getOrCreateConversation(_id: $_id, userIds: $userIds) {
+    cid
+  }
+}

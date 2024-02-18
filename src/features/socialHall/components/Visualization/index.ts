@@ -1,0 +1,1 @@
+export { SocialHallViz } from './SocialHallViz';

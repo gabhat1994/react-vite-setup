@@ -1,0 +1,10 @@
+query cleverTapUserProperty {
+  cq: capitalquotient {
+    getNoumenaScore {
+      capitalQuotient
+    }
+  }
+  space: getSpaceByType(type: HOME) {
+    percentCompleted
+  }
+}

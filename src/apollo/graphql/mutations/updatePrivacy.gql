@@ -1,0 +1,7 @@
+mutation updatePrivacy($input: NoumenaScoreVisibilityInput) {
+   capitalquotient{
+    updateNoumenaScoreVisibility(input: $input){
+      visibility
+    }
+  }
+}

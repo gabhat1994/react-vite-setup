@@ -1,0 +1,63 @@
+fragment SocialHall on SocialHall {
+  _id
+  ownerUserId {
+    ...UserBasicOutput
+  }
+  name
+  type
+  startTime
+  endTime
+  hosts {
+    ...UserBasicOutput
+  }
+  attendees {
+    ...UserBasicOutput
+  }
+  eventId
+  chamberId
+  isActive
+}
+
+fragment SocialHallAttendee on SocialHallAttendee {
+  _id
+  socialHallId
+  isHost
+  hallGroupId
+  eventRole {
+    userRole
+  }
+  attendeeId {
+    ...UserBasicOutput
+    skills {
+      ...Skill
+    }
+    bio
+  }
+  rtmToken
+  waitingRoomChannelName
+}
+
+fragment SocialHallGroup on SocialGroup {
+  _id
+  token
+  name
+  channelName
+  topic
+  startTime
+  socialHallId
+  raiseHands
+  hosts
+  rtmToken
+  users {
+    ...UserBasicOutput
+  }
+  invitedAsSpeakers {
+    invitee {
+      ...UserBasicOutput
+    }
+    inviter {
+      ...UserBasicOutput
+    }
+  }
+  speakers
+}

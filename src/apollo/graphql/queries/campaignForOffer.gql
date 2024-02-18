@@ -1,0 +1,12 @@
+query campaignForOffer($campaignId: ID!) {
+  getSelectedAdCampaignDetails(campaignId: $campaignId) {
+    status
+    paymentRef {
+      paymentStatus
+    }
+    createdBy {
+      firstName
+    }
+    ...CampaignOfferBasic
+  }
+}

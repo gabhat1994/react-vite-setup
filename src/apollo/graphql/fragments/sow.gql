@@ -1,0 +1,111 @@
+fragment SOWBasic on SOW {
+  _id
+  SOWNumber
+  status
+  title
+  effectiveDate
+  createdBy {
+    _id
+  }
+  linkedNoum {
+    ...SOWLinkedNoumBasic
+  }
+  linkedContract {
+    ...SOWLinkedContract
+  }
+  isCompleted
+}
+
+fragment SOW on SOW {
+  _id
+  SOWNumber
+  status
+  title
+  scopeOfWork
+  effectiveDate
+  deliverables {
+    ...SOWDeliverableMilestone
+  }
+  milestones {
+    ...SOWDeliverableMilestone
+  }
+  commission {
+    ...SOWCommissionAndReimbursement
+  }
+  expenseReimbursement {
+    ...SOWCommissionAndReimbursement
+  }
+  fees {
+    type
+    feesData {
+      ...SOWFeesInfo
+    }
+  }
+
+  linkedNoum {
+    ...SOWLinkedNoumBasic
+  }
+  linkedContract {
+    ...SOWLinkedContract
+  }
+  createdBy {
+    _id
+  }
+  logo
+  timeline {
+    ...ContractSowTimeline
+  }
+  isCompleted
+}
+
+fragment SOWLinkedNoumBasic on SpaceOutput {
+  _id
+  name
+  profileImageThumbnail
+}
+
+fragment SOWDeliverableMilestone on DeliverablesAndMilestones {
+  title
+  description
+  dueDate
+}
+
+fragment SOWCommissionAndReimbursement on CommissionAndReimbursement {
+  description
+  amount
+}
+
+fragment SOWLinkedContractBasic on Contract {
+  _id
+  title
+  effectiveDate
+  buyer {
+    _id
+    displayName
+    title
+  }
+  seller {
+    _id
+    displayName
+    title
+  }
+}
+
+fragment SOWLinkedContract on Contract {
+  ...SOWLinkedContractBasic
+  status
+  contractNumber
+  buyer {
+    ...NoumContactBasic
+  }
+  seller {
+    ...NoumContactBasic
+  }
+  isCompleted
+}
+
+fragment SOWFeesInfo on FeesInfo {
+  description
+  amount
+  dueDate
+}

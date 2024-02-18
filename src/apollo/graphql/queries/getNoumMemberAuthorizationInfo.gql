@@ -1,0 +1,5 @@
+query GetNoumMemberAuthorizationInfo($noumId: ID!) {
+  getSpaceById(id: $noumId) {
+    ...NoumAuthorization
+  }
+}

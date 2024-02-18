@@ -1,0 +1,3 @@
+mutation closeSocialHallGroup($socialHallId: ID!) {
+  closeSocialHallGroup(socialHallId: $socialHallId)
+}

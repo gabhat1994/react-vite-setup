@@ -1,0 +1,5 @@
+mutation exitFromGroup($groupId: ID!) {
+  exitFromGroup(groupId: $groupId) {
+    _id
+  }
+}

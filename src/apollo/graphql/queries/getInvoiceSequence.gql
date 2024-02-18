@@ -1,0 +1,7 @@
+query getInvoiceSequence($noumId: ID!) {
+  getInvoiceSequence(noumId: $noumId) {
+    _id
+    sequence
+    noumId
+  }
+}

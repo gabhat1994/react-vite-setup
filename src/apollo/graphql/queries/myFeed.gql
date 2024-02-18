@@ -1,0 +1,8 @@
+query myFeed($limit: Int, $offset: Int, $filter: myFeedFilters) {
+  myFeed(limit: $limit, offset: $offset, filter: $filter) {
+    count
+    data {
+      ...PostItem
+    }
+  }
+}

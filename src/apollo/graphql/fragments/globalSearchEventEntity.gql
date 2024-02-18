@@ -1,0 +1,6 @@
+fragment GlobalSearchEventEntity on GlobalSearchEventEntity {
+  noumId
+  name
+  status
+  createdAt
+}

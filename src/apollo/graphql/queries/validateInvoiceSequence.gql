@@ -1,0 +1,6 @@
+query validateInvoiceSequence($noumId: ID!, $sequence: String!, $invoiceId: ID) {
+  validateInvoiceSequence(noumId: $noumId, sequence: $sequence, invoiceId: $invoiceId) {
+    success
+    message
+  }
+}

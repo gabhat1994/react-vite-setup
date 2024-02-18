@@ -1,0 +1,67 @@
+
+<!--
+This is an auto-generated file. Do not modify.
+If you want to add or update any Glass Icons, follow instructions from here:
+https://communitycapitalnoumena.atlassian.net/wiki/spaces/NF/pages/1712488456/Glass+Icons
+-->
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=Settings, State=Active">
+<path id="back" d="M23.4514 13.9963C23.5109 13.7741 23.5579 13.5589 23.5976 13.3315L25.8102 12.4646C26.2852 12.2813 26.5395 11.7697 26.405 11.2781L25.3833 7.6604C25.319 7.42389 25.1678 7.21768 24.9586 7.08138C24.7495 6.94508 24.4972 6.88832 24.2502 6.92199L21.8789 7.22868C21.5786 6.87905 21.2507 6.55308 20.8926 6.26042L21.2023 3.95193C21.2722 3.453 20.9433 2.97149 20.4466 2.8384L16.7412 1.84553C16.2346 1.70977 15.709 1.96237 15.52 2.42936L14.6341 4.58345C14.1776 4.65784 13.7306 4.7762 13.2958 4.92885L11.3955 3.47756C10.9902 3.16193 10.4072 3.19206 10.045 3.55052L7.34873 6.18235C6.98649 6.54081 6.95342 7.10135 7.27055 7.50726L8.75336 9.36432C8.59596 9.78703 8.479 10.2235 8.40396 10.6683L6.19127 11.5352C5.71626 11.7185 5.46205 12.2301 5.59652 12.7217L6.61822 16.3394C6.75269 16.8309 7.24255 17.1485 7.75128 17.0778L10.1226 16.7711C10.4229 17.1207 10.7508 17.4467 11.1089 17.7394L10.7992 20.0478C10.7294 20.5468 11.0582 21.0283 11.5549 21.1614L15.2603 22.1543C15.757 22.2873 16.2825 22.0348 16.4716 21.5678L17.3575 19.4137C17.814 19.3393 18.261 19.2209 18.6958 19.0683L20.5961 20.5196C21.0013 20.8352 21.5844 20.8051 21.9466 20.4466L24.6403 17.8244C25.0025 17.466 25.0356 16.9054 24.7184 16.4995L23.2356 14.6425C23.325 14.4283 23.3918 14.2184 23.4514 13.9963Z" fill="url(#gradient-back-active)"/>
+<g id="front" filter="url(#filter0_i_17291_105269)">
+<path d="M21.7134 14C21.7134 13.77 21.7031 13.55 21.6826 13.32L23.5955 11.91C24.0069 11.61 24.12 11.05 23.8629 10.61L21.9397 7.38C21.8164 7.16818 21.6169 7.00814 21.3796 6.93062C21.1423 6.8531 20.884 6.86356 20.6541 6.96L18.4429 7.87C18.0624 7.61 17.6613 7.38 17.2396 7.19L16.9414 4.88C16.8797 4.38 16.4374 4 15.9232 4H12.0871C11.5626 4 11.1203 4.38 11.0586 4.88L10.7604 7.19C10.3387 7.38 9.93759 7.61 9.55706 7.87L7.34588 6.96C6.87279 6.76 6.31742 6.94 6.06031 7.38L4.13709 10.62C3.87998 11.06 3.99311 11.61 4.40449 11.92L6.31742 13.33C6.27479 13.779 6.27479 14.231 6.31742 14.68L4.40449 16.09C3.99311 16.39 3.87998 16.95 4.13709 17.39L6.06031 20.62C6.31742 21.06 6.87279 21.24 7.34588 21.04L9.55706 20.13C9.93759 20.39 10.3387 20.62 10.7604 20.81L11.0586 23.12C11.1203 23.62 11.5626 24 12.0768 24H15.9129C16.4272 24 16.8694 23.62 16.9311 23.12L17.2294 20.81C17.651 20.62 18.0521 20.39 18.4327 20.13L20.6438 21.04C21.1169 21.24 21.6723 21.06 21.9294 20.62L23.8526 17.39C24.1097 16.95 23.9966 16.4 23.5852 16.09L21.6723 14.68C21.7031 14.45 21.7134 14.23 21.7134 14Z" fill="url(#gradient-front-active)"/>
+</g>
+<g id="element" filter="url(#filter1_dii_17291_105269)">
+<circle cx="14" cy="14" r="3.5" fill="var(--glass-icon-element)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_17291_105269" x="4" y="4" width="20" height="21" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_17291_105269"/>
+</filter>
+<filter id="filter1_dii_17291_105269" x="8.5" y="9.5" width="11" height="11" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.521569 0 0 0 0 0.501961 0 0 0 0 0.568627 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_17291_105269"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_17291_105269" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="0.4" dy="-0.7"/>
+<feGaussianBlur stdDeviation="0.2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.912405 0 0 0 0 0.845833 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_17291_105269"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-0.4" dy="0.2"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_17291_105269" result="effect3_innerShadow_17291_105269"/>
+</filter>
+<linearGradient id="gradient-back-active" x1="7.60154" y1="4.70917" x2="24.8427" y2="17.6384" gradientUnits="userSpaceOnUse">
+<stop stop-color="var(--glass-icon-back-active-gradient-from)"/>
+<stop offset="1" stop-color="var(--glass-icon-back-active-gradient-to)"/>
+</linearGradient>
+<linearGradient id="gradient-back-hover" x1="7.60154" y1="4.70917" x2="24.8427" y2="17.6384" gradientUnits="userSpaceOnUse">
+<stop stop-color="var(--glass-icon-back-hover-gradient-from)"/>
+<stop offset="1" stop-color="var(--glass-icon-back-hover-gradient-to)"/>
+</linearGradient>
+<linearGradient id="gradient-front-active" x1="4" y1="9.13158" x2="24" y2="17.1579" gradientUnits="userSpaceOnUse">
+<stop stop-color="var(--glass-icon-front-active-gradient-from)"/>
+<stop offset="1" stop-color="var(--glass-icon-front-active-gradient-to)"/>
+</linearGradient>
+<linearGradient id="gradient-front-hover" x1="4" y1="9.13158" x2="24" y2="17.1579" gradientUnits="userSpaceOnUse">
+<stop stop-color="var(--glass-icon-front-hover-gradient-from)"/>
+<stop offset="1" stop-color="var(--glass-icon-front-hover-gradient-to)"/>
+</linearGradient>
+</defs>
+</svg>

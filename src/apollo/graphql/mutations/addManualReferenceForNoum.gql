@@ -1,0 +1,16 @@
+mutation addManualReferenceForNoum(
+  $experienceId: ID!
+  $reference: ManualNoumReferencePayload!
+) {
+  addManualReferenceForNoum(
+    experienceId: $experienceId
+    reference: $reference
+  ) {
+    _id
+    capacity
+    experienceId
+    imageUrl
+    providerName
+    referenceText
+  }
+}

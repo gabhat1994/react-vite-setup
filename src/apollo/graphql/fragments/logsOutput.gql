@@ -1,0 +1,12 @@
+fragment LogsOutput on LogsOutput {
+  additionalInfo
+  reason
+  moreInfo
+  statusTo
+  statusFrom
+  changeOn
+  changedBy
+  changedByDetails {
+    ...UserBasicOutput
+  }
+}

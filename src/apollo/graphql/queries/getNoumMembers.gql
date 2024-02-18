@@ -1,0 +1,30 @@
+query GetNoumMembers(
+  $noumId: ID!
+  $limit: Int
+  $offset: Int
+  $input: SearchMembersInput
+) {
+  getSpaceById(id: $noumId) {
+    _id
+    members(limit: $limit, offset: $offset, input: $input) {
+      count
+      data {
+        ...NoumMemberWithInvitation
+      }
+    }
+  }
+}
+
+query getNoumMembersCount(
+  $noumId: ID!
+  $limit: Int
+  $offset: Int
+  $input: SearchMembersInput
+) {
+  getSpaceById(id: $noumId) {
+    _id
+    members(limit: $limit, offset: $offset, input: $input) {
+      count
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query GetInvitedEventsCount(
+  $chamberId: ID!
+) {
+  getEvents(
+    chamberId: $chamberId
+    filter: { eventFilter:INVITATION }
+  ) {
+    count
+  }
+}

@@ -1,0 +1,5 @@
+mutation exitFromSocialHall($socialHallId: ID!, $fromLeaveCTA: Boolean) {
+  exitFromSocialHall(socialHallId: $socialHallId, fromLeaveCTA: $fromLeaveCTA) {
+    _id
+  }
+}

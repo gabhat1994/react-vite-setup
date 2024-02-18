@@ -1,0 +1,10 @@
+query getSpaceForView(
+  $noumId: ID!
+  $userHomeNoumId: ID! = ""
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter = PUBLISHED
+) {
+  getSpaceById(id: $noumId) {
+    ...SpaceOutput
+  }
+}

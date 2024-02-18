@@ -1,0 +1,2 @@
+import{j as n,c4 as l,I as x}from"./index-cd84bcc9.js";function h({isChecked:o,size:a=24,isIndeterminate:c,disabled:t,onChange:e,...k}){return n(l,{...k,size:a,isChecked:c||o,disableClick:t,icon:n(x,{name:c?"minus_xs":"tick_m",size:a,color:t?"--icon-checkbox-neutral-disabled":o||c?"--icon-checkbox-neutral-alt-default":"--icon-checkbox-neutral-alt-hidden","data-test":"Icon"}),onChange:e,"data-test":"Checkbox"})}export{h as T};
+//# sourceMappingURL=TickCheckbox-c4d9d4b6.js.map

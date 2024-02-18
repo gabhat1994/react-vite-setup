@@ -1,0 +1,5 @@
+query invoicePDFPreviewByID($id: ID!) {
+  invoicePDFPreviewByID(id: $id) {
+    base64
+  }
+}

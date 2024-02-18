@@ -1,0 +1,16 @@
+mutation updateCustomerContactDetails(
+  $additionalEmail: String
+  $mode: ModeEnum
+  $phone: String
+) {
+  updateCustomerContactDetails(
+    additionalEmail: $additionalEmail
+    mode: $mode
+    phone: $phone
+  ) {
+    additionalEmail
+    email
+    phone
+    preferredCommunicationMode
+  }
+}

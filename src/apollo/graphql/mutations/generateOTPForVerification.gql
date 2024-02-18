@@ -1,0 +1,8 @@
+mutation generateOTPForVerification($email: String, $phone: String) {
+  generateOTPForVerification(email: $email, phone: $phone) {
+    Status
+    error
+    message
+    success
+  }
+}

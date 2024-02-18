@@ -1,0 +1,5 @@
+query invoicePDFPreview($data: InvoicePDFInput) {
+  invoicePDFPreview(data: $data) {
+    base64
+  }
+}

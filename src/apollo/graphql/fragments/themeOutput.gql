@@ -1,0 +1,7 @@
+fragment ThemeOutput on ThemeOutput {
+  _id
+  name
+  colors {
+    ...ThemeColors
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "data": {
+    "getNoumConnectionsKPIs": {
+      "kpi": {
+        "connected": 34588,
+        "disconnected": 4218,
+        "currentConnections": 30370
+      },
+      "series": [
+        {
+          "date": "2022-01-30T09:32:11.064Z",
+          "values": {
+            "connected": 20,
+            "currentConnections": 50,
+            "disconnected": 116
+          }
+        },
+        {
+          "date": "2022-02-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 70,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-03-30T09:32:11.064Z",
+          "values": {
+            "connected": 20,
+            "currentConnections": 10,
+            "disconnected": 10
+          }
+        },
+        {
+          "date": "2022-04-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 10,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-05-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 10,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-06-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 10,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-07-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 10,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-08-30T09:32:11.064Z",
+          "values": {
+            "connected": 70,
+            "currentConnections": 10,
+            "disconnected": 16
+          }
+        },
+        {
+          "date": "2022-09-30T09:32:11.064Z",
+          "values": {
+            "connected": 20,
+            "currentConnections": 80,
+            "disconnected": 15
+          }
+        },
+        {
+          "date": "2022-10-30T00:00:00.000Z",
+          "values": {
+            "connected": 20,
+            "currentConnections": 60,
+            "disconnected": 19
+          }
+        },
+        {
+          "date": "2022-11-30T00:00:00.000Z",
+          "values": {
+            "connected": 39,
+            "currentConnections": 35,
+            "disconnected": 10
+          }
+        }
+      ]
+    }
+  }
+}

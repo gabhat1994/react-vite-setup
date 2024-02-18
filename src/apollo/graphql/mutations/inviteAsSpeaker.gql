@@ -1,0 +1,15 @@
+mutation inviteAsSpeaker($groupId: ID!, $invitedUserIds: [ID!]!) {
+  inviteAsSpeaker(groupId: $groupId, invitedUserIds: $invitedUserIds) {
+    _id
+    invitedAsSpeakers {
+      invitee {
+        _id
+        firstName
+      }
+      inviter {
+        _id
+        firstName
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query getNoumTransactionFeeDetails(
+  $noumDetailInput: NoumTransactionDetailInputType!
+) {
+  getNoumTransactionFeeDetails(noumDetailInput: $noumDetailInput) {
+    ...NoumTransaction
+  }
+}

@@ -1,0 +1,14 @@
+query userReferralEntry($productKey: String) {
+  userReferralEntry(productKey: $productKey) {
+    maxAllowedCount
+    ownerUserId {
+      ...UserBasicOutput
+    }
+    referralCode
+    usedBy {
+      ...UserBasicOutput
+      createdAt
+    }
+    usedCount
+  }
+}

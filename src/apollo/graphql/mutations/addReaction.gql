@@ -1,0 +1,8 @@
+mutation addReaction($_id: ID!, $type: ReactionCategory) {
+  addReaction(_id: $_id, type: $type) {
+    _id
+    reactions {
+      ...PostReactionFragment
+    }
+  }
+}

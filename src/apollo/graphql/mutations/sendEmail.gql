@@ -1,0 +1,3 @@
+mutation sendEmail($input: EmailParams) {
+  sendEmail(input: $input)
+}

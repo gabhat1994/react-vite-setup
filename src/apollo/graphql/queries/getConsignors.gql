@@ -1,0 +1,5 @@
+query GetConsignors($pov: ContractListingPOV!) {
+  getConsignors(pov: $pov) {
+    ...NoumContactBasic
+  }
+}

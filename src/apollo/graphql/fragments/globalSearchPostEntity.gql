@@ -1,0 +1,14 @@
+fragment GlobalSearchPostEntity on GlobalSearchPostEntity {
+  noumId
+  noumName
+  noumThumbnailUrl
+  type
+  content
+  createdAt
+  status
+  tags {
+    uid {
+      ...UserBasicOutput
+    }
+  }
+}

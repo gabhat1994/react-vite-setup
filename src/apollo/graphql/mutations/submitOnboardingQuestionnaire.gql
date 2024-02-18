@@ -1,0 +1,7 @@
+mutation submitOnboardingQuestionnaire(
+  $input: [submitOnboardingQuestionnaire]
+) {
+  submitOnboardingQuestionnaire(input: $input) {
+    userStatus
+  }
+}

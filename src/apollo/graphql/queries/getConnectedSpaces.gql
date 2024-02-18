@@ -1,0 +1,20 @@
+query getConnectedSpaces(
+  $uid: ID!
+  $filter: ProjectChamberFilter
+  $sort: SortType
+  $limit: Int!
+  $offset: Int!
+) {
+  getConnectedSpaces(
+    uid: $uid
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...SpaceForList
+    }
+  }
+}

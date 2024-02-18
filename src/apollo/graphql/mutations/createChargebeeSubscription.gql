@@ -1,0 +1,5 @@
+mutation createChargebeeSubscription($hosted_id: String!) {
+  createSubscriptionAndInvoiceFromHostedPages(hosted_id: $hosted_id) {
+    ...SubscriptionAfterCreatePlan
+  }
+}

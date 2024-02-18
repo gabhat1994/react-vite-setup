@@ -1,0 +1,5 @@
+query campaignAccount {
+  getCampaignAccount {
+    ...CampaignAccount
+  }
+}

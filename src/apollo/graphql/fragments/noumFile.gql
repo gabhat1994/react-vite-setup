@@ -1,0 +1,21 @@
+fragment NoumFile on NoumFile {
+  _id
+  owner {
+    _id
+    firstName
+    lastName
+    middleName
+    userStatus
+  }
+  name
+  description
+  extension
+  fileUrl
+  downloadsCount
+  viewsCount
+  uploadedAt
+  updatedAt
+  visibilityRoles
+  status
+  fileSize
+}

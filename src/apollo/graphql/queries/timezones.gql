@@ -1,0 +1,8 @@
+query timezones($search: String, $limit: Int, $offset: Int) {
+  timezones(search: $search, limit: $limit, offset: $offset) {
+    count
+    data {
+      ...Timezone
+    }
+  }
+}

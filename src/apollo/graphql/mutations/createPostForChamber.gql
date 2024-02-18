@@ -1,0 +1,6 @@
+mutation createPostForChamber($input: PostInput) {
+  createPostForChamber(input: $input) {
+    _id
+    postStatus
+  }
+}

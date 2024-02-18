@@ -1,0 +1,48 @@
+.mention {
+  color: #4a85bb;
+  text-decoration: none;
+}
+
+.mentionSuggestions {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ max-width: 250px;
+  max-height: 250px;
+ background-color: white;
+ cursor: pointer;
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+ z-index: 50;
+
+}
+
+.mentionSuggestionsEntry {
+  padding: 7px 8px 3px 8px;
+  transition: background-color 0.4s cubic-bezier(.27,1.27,.48,.56);
+  display: flex;
+  align-items: center;
+  gap: 8px
+
+}
+
+.mentionSuggestionsEntry:active {
+  background-color: #cce7ff;
+}
+
+.mentionSuggestionsEntryFocused {
+  composes: mentionSuggestionsEntry;
+  background-color: #e6f3ff;
+}
+
+.mentionSuggestionsEntryText,
+.mentionSuggestionsEntryTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mentionSuggestionsEntryAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+} 

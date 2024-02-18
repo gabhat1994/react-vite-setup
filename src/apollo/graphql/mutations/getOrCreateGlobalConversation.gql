@@ -1,0 +1,5 @@
+mutation getOrCreateGlobalConversation($id: ID, $userIds: [ID]) {
+  getOrCreateGlobalConversation(_id: $id, userIds: $userIds) {
+    ...ConversationOutput
+  }
+}

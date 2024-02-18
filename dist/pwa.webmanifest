@@ -1,0 +1,31 @@
+{
+  "id": "Noumena",
+  "name": "Noumena",
+  "short_name": "Noumena",
+  "start_url": "/",
+  "scope": "/",
+
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "display": "standalone",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/images/pwa_logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/pwa_logo_1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "any"
+    }
+  ],
+
+  "lang": "en",
+  "description": "Grow Your Freelancer Business. Connect, Collaborate, Get Capital and Funding.",
+  "categories": ["business", "finance"],
+  "screenshots": []
+}

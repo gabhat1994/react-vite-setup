@@ -1,0 +1,3 @@
+import { AutoCreateOrUnarchiveNoumAfterCheckout } from '@/screens/Chamber/components/AutoCreateOrUnarchiveNoumAfterCheckout/AutoCreateOrUnarchiveNoumAfterCheckout';
+
+export default AutoCreateOrUnarchiveNoumAfterCheckout;

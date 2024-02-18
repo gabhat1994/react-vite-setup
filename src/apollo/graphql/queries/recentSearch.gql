@@ -1,0 +1,24 @@
+query RecentSearches {
+  recentSearches {
+    searchedQueries
+    clickedEntities {
+      count
+      data {
+        id
+        entityType
+        post {
+          ...GlobalSearchPostEntity
+        }
+        noum {
+          ...GlobalSearchNoumEntity
+        }
+        event {
+          ...GlobalSearchEventEntity
+        }
+        user {
+          ...GlobalSearchEntityUser
+        }
+      }
+    }
+  }
+}

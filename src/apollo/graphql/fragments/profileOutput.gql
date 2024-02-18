@@ -1,0 +1,8 @@
+fragment ProfileOutput on ProfileOutput {
+  _id
+  profilePicture
+  profilePictureThumbnail
+  socialLinks {
+    ...SocialLink
+  }
+}

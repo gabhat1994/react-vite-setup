@@ -1,0 +1,5 @@
+mutation verifyMicroDepositDwolla($input: VerifyMicroDepositInput!) {
+  verifyMicroDepositDwolla(input: $input) {
+    ...AccountListOutput
+  }
+}

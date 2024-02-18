@@ -1,0 +1,13 @@
+fragment ThreadOutput on ThreadOutput {
+  _id
+  content
+  createdAt
+  tags {
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  uid {
+    ...UserBasicOutput
+  }
+}

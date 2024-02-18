@@ -1,0 +1,3 @@
+query invoiceDownloadUrl($invoice_id: String!) {
+  getInvoiceDownloadURL(invoice_id: $invoice_id)
+}

@@ -1,0 +1,31 @@
+query GetContracts(
+  $filter: ContractFilter
+  $limit: Int
+  $offset: Int
+  $viewingAs: ContractListingPOV!
+) {
+  getContractList(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    viewingAs: $viewingAs
+  ) {
+    count
+    data {
+      ...ContractBasic
+    }
+  }
+}
+
+query GetContractsForSelector(
+  $filter: ContractFilter
+  $limit: Int
+  $offset: Int
+) {
+  getContractList(filter: $filter, limit: $limit, offset: $offset) {
+    count
+    data {
+      ...ContractBasic
+    }
+  }
+}

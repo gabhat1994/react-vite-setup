@@ -1,0 +1,5 @@
+query GetEventUserRole($eventId: ID!) {
+  getEventUserRole(eventId: $eventId) {
+    userRole
+  }
+}

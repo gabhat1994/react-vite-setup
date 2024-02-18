@@ -1,0 +1,9 @@
+query getOnboardingQuestionAndAnswers($limit: Int, $offset: Int) {
+  getOnboardingQuestionAndAnswers(limit: $limit, offset: $offset) {
+    data {
+      ...OnboardingQuestionAndAnswers
+    }
+    count
+    __typename
+  }
+}

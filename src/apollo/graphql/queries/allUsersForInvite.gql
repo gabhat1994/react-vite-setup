@@ -1,0 +1,41 @@
+query allUsersForInvite(
+  $filter: SearchUserFilter
+  $limit: Int
+  $offset: Int
+  $search: String
+  $eventId: ID
+  $chamberId: ID
+  $skipEventRole: Boolean!
+  $oldConnectionFlow: Boolean
+) {
+  allUsers(
+    filter: $filter
+    limit: $limit
+    offset: $offset
+    search: $search
+    chamberId: $chamberId
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    count
+    data {
+      _id
+      firstName
+      lastName
+      middleName
+      title
+      phone
+      email
+      userStatus
+      profile {
+        profilePictureThumbnail
+      }
+      chamber {
+        userId
+        _id
+      }
+      getEventUserRole(eventId: $eventId) @skip(if: $skipEventRole) {
+        ...EventCurrentUser
+      }
+    }
+  }
+}

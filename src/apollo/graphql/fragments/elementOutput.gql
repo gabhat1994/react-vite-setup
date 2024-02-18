@@ -1,0 +1,23 @@
+fragment ElementOutput on ElementOutput {
+  _id
+  elementType
+  position
+  status
+  bodyContentType
+  bodyContent
+  headerContent
+  draft {
+    ...ElementInnerOutput
+  }
+  unSaved {
+    ...ElementInnerOutput
+  }
+  tempStatus
+  viewOnly
+  bodyContentJson
+  percentCompleted
+  customPreviewPosition
+  isCustomPreviewVisible
+  meta
+  isCustomPreviewAdditionalInfo
+}

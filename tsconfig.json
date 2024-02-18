@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "types": ["vitest/globals", "vite-plugin-svgr/client"],
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*", "./dist/*"]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "scripts/vitestGlobalSetup.ts",
+    "vite.config.ts",
+    "./src/assets/glass-icons/index.ts"
+  ],
+  "exclude": ["node_modules", "**/*.generated.tsx"]
+}

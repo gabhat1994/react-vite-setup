@@ -1,0 +1,97 @@
+fragment NoumCard on SpaceOutput {
+  profileImage
+  name
+  projectType
+}
+
+fragment NoumDropDownList on SpaceOutput {
+  _id
+  ...NoumCard
+}
+
+fragment CampaignOfferBasic on AdCampaignOutput {
+  title
+  adId
+  audience {
+    category
+    targetLocation
+    targetLanguage
+  }
+  startDate
+  noumId {
+    ...NoumCard
+  }
+}
+
+fragment CampaignBasic on AdCampaignOutput {
+  _id
+  title
+  status
+  startDate
+  endDate
+  noumId {
+    ...NoumDropDownList
+  }
+}
+
+fragment CampaignSummary on AdCampaignOutput {
+  ...CampaignBasic
+  adId
+  goals
+  otherGoals
+  audience {
+    targetLocation
+    targetLanguage
+    category
+  }
+  budgetType
+  budgetAmount
+}
+
+fragment CampaignReportForCampaignSummary on AdCampaignReportOutput {
+  _id
+  reportId
+  createdAt
+  reportDate
+}
+
+fragment Metrics on AdCampaignReportMetricsOutput {
+  clicks
+  impressions
+  ctr
+  avgCPC
+  cost
+}
+
+fragment CampaignReport on AdCampaignReportOutput {
+  ...CampaignReportForCampaignSummary
+  clientMessage
+  metrics {
+    ...Metrics
+  }
+  createdBy {
+    firstName
+    lastName
+    profile {
+      profilePicture
+    }
+  }
+}
+
+fragment CampaignAccount on CampaignAccountOutput {
+  id
+  accountName
+  customerName
+  walletName
+  accountType
+  maskAccountNumber
+  primary
+}
+
+fragment SpaceForNoumAds on SpaceOutput {
+  name
+  description
+  slug
+  enableAds
+  keywords
+}

@@ -1,0 +1,35 @@
+query getRecommendedNoums(
+  $limit: Int
+  $offset: Int
+  $filter: SpaceCategoryFilter
+) {
+  getRecommendedNoums(limit: $limit, offset: $offset, filter: $filter) {
+    data {
+      name
+      _id
+      type
+      title
+      description
+      profileImage
+      followersCount
+      isFavourited
+      status
+      uid {
+        _id
+        firstName
+        lastName
+        title
+        userStatus
+        location
+        profile {
+          profilePicture
+        }
+      }
+      category {
+        _id
+        name
+      }
+    }
+    count
+  }
+}

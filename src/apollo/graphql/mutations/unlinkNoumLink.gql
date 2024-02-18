@@ -1,0 +1,5 @@
+mutation unlinkNoumLink($noumLinkId: ID!) {
+  unlinkNoumLink(noumLinkId: $noumLinkId) {
+    ...NoumLink
+  }
+}

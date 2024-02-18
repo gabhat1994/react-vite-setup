@@ -1,0 +1,5 @@
+query campaignListCount($limit: Int, $offset: Int, $filter: AdCampaignFilter) {
+  getAdCampaignsByUser(limit: $limit, offset: $offset, filter: $filter) {
+    count
+  }
+}

@@ -1,0 +1,5 @@
+query GetNoumsLinkedToSOWs($pov: ContractListingPOV!) {
+  getNoumsLinkedToSOWs(pov: $pov) {
+    ...SOWLinkedNoumBasic
+  }
+}

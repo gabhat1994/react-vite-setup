@@ -1,0 +1,8 @@
+{
+  "color": {
+    "font": {
+      "base": { "value": "{color.base.gray.0}" },
+      "primary": { "value": "{color.base.gray.0}" }
+    }
+  }
+}

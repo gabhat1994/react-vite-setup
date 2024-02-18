@@ -1,0 +1,6 @@
+query getProjectChamberCategories {
+  getProjectChamberCategories {
+    _id
+    name
+  }
+}

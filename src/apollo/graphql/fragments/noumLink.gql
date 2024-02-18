@@ -1,0 +1,12 @@
+fragment NoumLink on NoumLink {
+  _id
+  linkedNoums {
+    ...LinkedNoum
+  }
+  linkedNoumsCount
+  status
+  followersCount
+  projectType
+  linkedAt
+  connectionsCount
+}

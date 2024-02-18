@@ -1,0 +1,8 @@
+mutation OTPVerification($email: String, $otp: Int, $phone: String) {
+  OTPVerification(email: $email, otp: $otp, phone: $phone) {
+    Status
+    error
+    message
+    success
+  }
+}

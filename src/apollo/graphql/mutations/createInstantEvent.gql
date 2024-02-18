@@ -1,0 +1,16 @@
+mutation createInstantEvent($input: CreateInstantEventInput!) {
+  createInstantEvent(input: $input) {
+    _id
+    title
+    status
+    chamberId {
+      _id
+      type
+      name
+      profileImage
+    }
+    socialHall {
+      _id
+    }
+  }
+}

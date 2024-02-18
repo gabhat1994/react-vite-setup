@@ -1,0 +1,10 @@
+query getSpaceById(
+  $noumId: ID!
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter
+  $userHomeNoumId: ID! = ""
+) {
+  getSpaceById(id: $noumId) {
+    ...SpaceOutput
+  }
+}

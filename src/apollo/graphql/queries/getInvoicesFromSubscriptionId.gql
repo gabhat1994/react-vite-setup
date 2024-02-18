@@ -1,0 +1,5 @@
+query getInvoicesFromSubscriptionId($input: InvoiceFetchInput) {
+  getInvoices(input: $input) {
+    ...SubscriptionInvoices
+  }
+}

@@ -1,0 +1,56 @@
+import { useContext } from 'react';
+import { OnboardingContext } from '@/providers/OnboardingProvider';
+
+export const useInitialSignUp = () => {
+  const {
+    userInfo,
+    isResendOTPDisabled,
+    loading,
+    nextRequestAfter,
+    recaptchaToken,
+    setDisableResendOTP,
+    setUserInfo,
+    signUpUser,
+    submitOtp,
+    signUpEmail,
+    setLoading,
+    timedOut,
+    returnNewReCaptcha,
+    remainingRequests,
+    showBlockedErrorMsg,
+    isSigningUpFromNextApp,
+    setIsSigningUpFromNextApp,
+    quickSignUpNoumId,
+    setQuickSignUpNoumID,
+    backUrl,
+    setBackUrl,
+    isLoggingingUpFromNextApp,
+    setIsLoggingingUpFromNextApp,
+  } = useContext(OnboardingContext);
+
+  return {
+    userInfo,
+    isResendOTPDisabled,
+    loading,
+    nextRequestAfter,
+    recaptchaToken,
+    setDisableResendOTP,
+    setUserInfo,
+    signUpUser,
+    submitOtp,
+    signUpEmail,
+    setLoading,
+    timedOut,
+    returnNewReCaptcha,
+    remainingRequests,
+    showBlockedErrorMsg,
+    isSigningUpFromNextApp,
+    setIsSigningUpFromNextApp,
+    quickSignUpNoumId,
+    setQuickSignUpNoumID,
+    backUrl,
+    setBackUrl,
+    isLoggingingUpFromNextApp,
+    setIsLoggingingUpFromNextApp,
+  };
+};

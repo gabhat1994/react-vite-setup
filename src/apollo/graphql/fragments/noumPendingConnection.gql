@@ -1,0 +1,17 @@
+fragment NoumPendingConnection on NoumPendingConnection {
+  _id
+  type
+  user {
+    ...UserBasicOutput
+  }
+  noum {
+    _id
+    name
+    profileImage
+    type
+    uid {
+      ...UserBasicOutput
+    }
+  }
+  requestedAt
+}

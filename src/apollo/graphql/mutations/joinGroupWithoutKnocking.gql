@@ -1,0 +1,5 @@
+mutation joinGroupWithoutKnocking($groupId: ID!) {
+  joinGroupWithoutKnocking(groupId: $groupId) {
+    _id
+  }
+}

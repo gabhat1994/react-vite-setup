@@ -1,0 +1,5 @@
+query GetSingleSOW($id: ID!) {
+  getSingleSOW(_id: $id) {
+    ...SOW
+  }
+}

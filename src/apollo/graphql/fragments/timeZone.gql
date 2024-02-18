@@ -1,0 +1,9 @@
+fragment Timezone on Timezone {
+  _id
+  offset
+  text
+  value
+  abbr
+  utcOffset
+  timezone
+}

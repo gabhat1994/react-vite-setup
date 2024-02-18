@@ -1,0 +1,18 @@
+mutation publishElementState(
+  $currentState: ElementStatusEnum!
+  $prevStates: [ElementStatusEnum!]!
+  $noumId: ID!
+  $userHomeNoumId: ID! = ""
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter = UNPUBLISHED
+  $elementIds: [ID]
+) {
+  publishElementState(
+    currentState: $currentState
+    prevStates: $prevStates
+    spaceId: $noumId
+    elementIds: $elementIds
+  ) {
+    ...SpaceOutput
+  }
+}

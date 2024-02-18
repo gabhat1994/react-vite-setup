@@ -1,0 +1,6 @@
+mutation updateUserKyc($input: KycInput) {
+  updateUserKyc(input: $input) {
+    ssn
+    dob
+  }
+}

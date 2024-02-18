@@ -1,0 +1,2 @@
+import{j as o,am as s}from"./index-cd84bcc9.js";import{B as t}from"./vendor-51460554.js";const n=()=>o(s,{onSelectOption:()=>{},containerWidth:"100%",usePortal:!1,isOpen:!0,options:[],padding:"0px",usePopStyle:!1,noAvailableOptions:!0,noAvailableOptionsText:t("noumena.dropdown.no_users_searched.text"),"data-test":"NoSearchResultsForNoums-Dropdown",children:({targetRef:e})=>o("div",{ref:e})});export{n as N};
+//# sourceMappingURL=NoSearchResultsForNoums-50e9f00f.js.map

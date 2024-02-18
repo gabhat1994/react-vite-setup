@@ -1,0 +1,31 @@
+query getSpaceFollowers($spaceId: ID!, $limit: Int, $offset: Int) {
+  getSpaceFollowers(spaceId: $spaceId, limit: $limit, offset: $offset) {
+    data {
+      _id
+      followersCount
+      requestedAt
+      uid {
+        _id
+        firstName
+        middleName
+        lastName
+        title
+        profile {
+          profilePicture
+          profilePictureThumbnail
+        }
+        chamber {
+          _id
+          userId
+        }
+        userStatus
+      }
+      connectionWithNoum(noumId: $spaceId) {
+        _id
+        status
+        approvedAt
+      }
+    }
+    count
+  }
+}

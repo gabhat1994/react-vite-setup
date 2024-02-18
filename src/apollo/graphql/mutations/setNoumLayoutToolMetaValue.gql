@@ -1,0 +1,5 @@
+mutation setNoumLayoutToolMetaValue($input: SetNoumLayoutToolMetaValueInput!) {
+  setNoumLayoutToolMetaValue(input: $input) {
+    ...ElementOutput
+  }
+}

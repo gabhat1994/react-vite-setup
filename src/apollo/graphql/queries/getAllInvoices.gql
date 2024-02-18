@@ -1,0 +1,18 @@
+query getAllInvoices($input: InvoiceGetAllInput!) {
+  getAllInvoices(input: $input) {
+    count
+    data {
+      external_invoice_id
+      invoice_id
+      plan_name
+      issue_date
+      first_invoice
+      amount_paid
+      plan_type
+      payment_method
+      payment_method_details
+      status
+      total
+    }
+  }
+}

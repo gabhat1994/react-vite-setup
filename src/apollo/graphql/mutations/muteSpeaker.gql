@@ -1,0 +1,13 @@
+mutation muteMainEventSpeaker(
+  $groupId: ID!
+  $speakerId: ID!
+  $actionType: MuteSpeakerType!
+) {
+  muteSpeaker(
+    groupId: $groupId
+    speakerId: $speakerId
+    actionType: $actionType
+  ) {
+    _id
+  }
+}

@@ -1,0 +1,81 @@
+query getAccountList {
+  getAccountList(query: { self: true, limit: 100, page: 1 }) {
+    ...AccountListOutput
+  }
+}
+query getWalletBalance {
+  getWalletBalance {
+    total {
+      ...Currency
+    }
+    balance {
+      ...Currency
+    }
+  }
+}
+query getSubWalletBalance($chamberId: String!) {
+  getSubWalletBalance(chamberId: $chamberId) {
+    id
+    masterWalletId
+    amount {
+      ...Currency
+    }
+  }
+}
+
+query getBankAccountBalance($id: String!) {
+  getBankAccountBalance(id: $id) {
+    id
+    clientAccountId
+    maskAccountNumber
+    balance {
+      ...Currency
+    }
+  }
+}
+query getNoumProfile($id: ID!) {
+  getSpaceById(id: $id) {
+    profileImage
+  }
+}
+query getPersonalInfo {
+  currentUser {
+    firstName
+    lastName
+    citizenship
+    email
+  }
+  userKyc {
+    dob
+    ssn
+  }
+  userAddress {
+    ...UserAddress
+  }
+}
+query getToken {
+  getSpaceByType(type: HOME) {
+    token {
+      ...Token
+    }
+  }
+}
+
+query getTokenTransaction {
+  getSpaceByType(type: HOME) {
+    token {
+      ...Token
+    }
+    tokenTransaction {
+      ...TokenTransaction
+    }
+  }
+}
+
+query getStripeToken {
+  getConfig {
+    stripe {
+      publishableKey
+    }
+  }
+}

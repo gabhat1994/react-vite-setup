@@ -1,0 +1,12 @@
+query getAllUidForChamberPosts($chamberId: ID!, $offset: Int, $limit: Int) {
+  getAllUidForChamberPosts(
+    chamberId: $chamberId
+    offset: $offset
+    limit: $limit
+  ) {
+    count
+    data {
+      ...UserBasicOutput
+    }
+  }
+}

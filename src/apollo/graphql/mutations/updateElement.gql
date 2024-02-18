@@ -1,0 +1,11 @@
+mutation updateElement(
+  $id: ID!
+  $input: [ElementInput!]
+  $editorV2Enabled: Boolean!
+  $status: NoumLayoutStatusFilter = UNPUBLISHED
+) {
+  updateElement(id: $id, input: $input) {
+    _id
+    ...NoumWithLayout
+  }
+}

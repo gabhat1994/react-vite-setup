@@ -1,0 +1,5 @@
+query getLocation($search: String!) {
+  getLocation(search: $search) {
+    description
+  }
+}

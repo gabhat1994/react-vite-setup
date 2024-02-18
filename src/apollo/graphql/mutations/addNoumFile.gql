@@ -1,0 +1,5 @@
+mutation addNoumFile($input: AddNoumFileInput!) {
+  addNoumFile(input: $input) {
+    ...NoumFile
+  }
+}

@@ -1,0 +1,3 @@
+mutation moveToolToNoumLayoutColumn($input: MoveToolToNoumLayoutColumnInput!) {
+  moveToolToNoumLayoutColumn(input: $input)
+}

@@ -1,0 +1,5 @@
+fragment UserOutputVisibility on UserOutputVisibility {
+  email
+  phone
+  location
+}

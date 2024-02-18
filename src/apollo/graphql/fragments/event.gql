@@ -1,0 +1,97 @@
+fragment EventUserOutput on UserOutput {
+  _id
+  email
+  firstName
+  lastName
+  middleName
+  title
+  userStatus
+  profile {
+    _id
+    profilePictureThumbnail
+    profilePicture
+  }
+}
+fragment Event on Event {
+  _id
+  title
+  eventStatusUpdatedAt
+  description
+  eventDate
+  duration
+  timezone {
+    ...Timezone
+  }
+  privacy
+  isInstantEvent
+  cohosts {
+    ...Cohost
+  }
+  userId {
+    ...EventUserOutput
+    chamber {
+      _id
+    }
+  }
+  invitations {
+    ...Invitees
+  }
+  totalAttendees
+  currentUser {
+    ...EventCurrentUser
+  }
+  status
+  socialHall {
+    _id
+    hasUserJoined
+    isActive
+  }
+  chamberId {
+    _id
+    type
+    name
+    uid {
+      ...EventUserOutput
+    }
+  }
+  recurring
+  eventStatusUpdatedAt
+  ...RecurringEvent
+}
+
+fragment EventCurrentUser on CurrentUser {
+  invitation {
+    ...Invitees
+  }
+  eventId
+  userId
+  userRole
+}
+
+fragment Invitees on Invitees {
+  _id
+  status
+}
+
+fragment RecurringEvent on Event {
+  recurring
+  recurringDetails {
+    frequency
+    weekDays
+    interval
+    monthDates
+    custom
+  }
+}
+
+fragment ParticipatedEvent on Event {
+  _id
+  status
+  eventDate
+  duration
+  title
+  currentUser {
+    ...EventCurrentUser
+  }
+  ...RecurringEvent
+}

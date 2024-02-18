@@ -1,0 +1,13 @@
+fragment NoumLayout on NoumLayout {
+  _id
+  status
+  sections {
+    ...NoumLayoutSection
+  }
+  uniqueToolStatuses {
+    toolType
+    isAlreadyUsed
+  }
+  hasUndoAction
+  hasRedoAction
+}

@@ -1,0 +1,5 @@
+mutation cancelRaiseHandByGroupId($groupId: ID!) {
+  cancelRaiseHandByGroupId(groupId: $groupId) {
+    _id
+  }
+}

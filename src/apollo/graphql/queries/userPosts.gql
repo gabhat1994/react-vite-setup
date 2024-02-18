@@ -1,0 +1,8 @@
+query userPosts($limit: Int, $offset: Int, $uid: ID!) {
+  userPosts(limit: $limit, offset: $offset, uid: $uid) {
+    count
+    data {
+      ...PostItem
+    }
+  }
+}

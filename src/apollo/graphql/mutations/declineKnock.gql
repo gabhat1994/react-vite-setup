@@ -1,0 +1,6 @@
+mutation declineKnock($knockId: ID!) {
+  declineKnock(knockId: $knockId) {
+    _id
+    groupId
+  }
+}

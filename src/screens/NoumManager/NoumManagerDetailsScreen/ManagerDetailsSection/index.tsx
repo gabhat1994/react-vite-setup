@@ -1,0 +1,1 @@
+export { ManagerDetailsSection } from './ManagerDetailsSection';

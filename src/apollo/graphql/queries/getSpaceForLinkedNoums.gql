@@ -1,0 +1,5 @@
+query getSpaceForLinkedNoums($noumId: ID!) {
+  getSpaceById(id: $noumId) {
+    ...LinkedNoum
+  }
+}

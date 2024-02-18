@@ -1,0 +1,1 @@
+export { SelectedAvatar } from './SelectedAvatar';

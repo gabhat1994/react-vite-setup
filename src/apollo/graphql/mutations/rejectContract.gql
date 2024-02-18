@@ -1,0 +1,3 @@
+mutation RejectContract($id: ID!) {
+  rejectContract(documentId: $id)
+}

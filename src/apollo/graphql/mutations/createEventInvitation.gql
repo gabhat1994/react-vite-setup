@@ -1,0 +1,5 @@
+mutation CreateEventInvitation($id: ID!, $userId: ID!, $acceptAll: Boolean) {
+  createEventInvitation(_id: $id, userId: $userId, acceptAll: $acceptAll) {
+    ...Event
+  }
+}

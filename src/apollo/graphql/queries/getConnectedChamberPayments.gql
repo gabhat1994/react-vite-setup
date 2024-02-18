@@ -1,0 +1,12 @@
+query getConnectedChamberPayments(
+  $filter: PaymentFilter
+  $limit: Int!
+  $page: Int!
+) {
+  getConnectedChamberPayments(filter: $filter, limit: $limit, page: $page) {
+    count
+    data {
+      ...Transactions
+    }
+  }
+}

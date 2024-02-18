@@ -1,0 +1,26 @@
+query getSpaceByType($type: SpaceTypeEnum!) {
+  getSpaceByType(type: $type) {
+    _id
+    description
+    elements {
+      ...ElementOutput
+    }
+    institution
+    name
+    networks {
+      ...NetworkOutput
+    }
+    permission
+    profileImage
+    status
+    title
+    token {
+      ...Token
+    }
+    type
+    uid {
+      ...NoumOwnerUser
+    }
+    percentCompleted
+  }
+}

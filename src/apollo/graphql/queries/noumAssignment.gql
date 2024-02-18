@@ -1,0 +1,8 @@
+query noumAssignment($limit: Int, $filters: ProjectChamberFilter) {
+  getOwnProjectChambers(limit: $limit, filter: $filters) {
+    count
+    data {
+      ...NoumDropDownList
+    }
+  }
+}

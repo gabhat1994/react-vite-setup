@@ -1,0 +1,18 @@
+query getOwnNoumsToLink(
+  $limit: Int!
+  $offset: Int!
+  $filter: ProjectChamberFilter
+  $sort: SortType
+) {
+  getOwnProjectChambers(
+    limit: $limit
+    offset: $offset
+    filter: $filter
+    sort: $sort
+  ) {
+    count
+    data {
+      ...LinkedNoum
+    }
+  }
+}

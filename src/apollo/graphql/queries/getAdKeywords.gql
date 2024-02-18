@@ -1,0 +1,3 @@
+query adKeyWords($promptText: String!, $options: PromptOptionsInput) {
+  getAdKeywords(promptText: $promptText, options: $options)
+}

@@ -1,0 +1,1 @@
+export { SizedSkeleton } from './SizedSkeleton';

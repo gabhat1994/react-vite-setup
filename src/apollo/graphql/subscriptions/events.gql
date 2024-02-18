@@ -1,0 +1,7 @@
+subscription Events($userId: ID!) {
+  events(userId: $userId) {
+    type
+    eventId
+    userId
+  }
+}

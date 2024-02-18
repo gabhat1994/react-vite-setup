@@ -1,0 +1,3 @@
+mutation updateUserMediaTestingForSH($accept: Boolean!) {
+  updateUserMediaTestingForSH(accept: $accept)
+}

@@ -1,0 +1,5 @@
+mutation removeComment($_id: ID!, $commentId: ID!) {
+  removeComment(_id: $_id, commentId: $commentId) {
+    _id
+  }
+}

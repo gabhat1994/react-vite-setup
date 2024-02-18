@@ -1,0 +1,5 @@
+mutation submitRiseApplication($_id: ID!, $input: ApplicationResultInput!) {
+  updateNoumApplicationResult(_id: $_id, input: $input) {
+    status
+  }
+}

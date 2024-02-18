@@ -1,0 +1,11 @@
+fragment OnboardingQuestionAndAnswers on QuestionAndAnswers {
+  _id
+  question
+  options {
+    ...OnboardingAnswerOptions
+  }
+}
+fragment OnboardingAnswerOptions on AnswerOptions {
+  answer
+  description
+}

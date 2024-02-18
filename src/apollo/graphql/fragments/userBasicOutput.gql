@@ -1,0 +1,20 @@
+fragment UserBasicOutput on UserOutput {
+  _id
+  firstName
+  lastName
+  middleName
+  username
+  title
+  phone
+  email
+  profile {
+    ...ProfileOutput
+  }
+  userStatus
+  status
+  userType
+  chamber {
+    userId
+    _id
+  }
+}

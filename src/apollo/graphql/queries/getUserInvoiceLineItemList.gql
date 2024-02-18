@@ -1,0 +1,15 @@
+query getUserInvoiceLineItemList($filter: InvoiceSearchInput!) {
+  getUserInvoiceLineItemList(filter: $filter) {
+    data {
+      id
+      description
+      quantity
+      unitPrice
+      taxRate
+      taxLabel
+      currency
+      amount
+    }
+    count
+  }
+}

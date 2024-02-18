@@ -1,0 +1,12 @@
+query getNoumProgramresultById($noumId: ID!) {
+  getNoumProgramresultById(noumId: $noumId) {
+    _id
+    status
+    score
+    resultJSON
+    questions
+    parentNoumId {
+      _id
+    }
+  }
+}

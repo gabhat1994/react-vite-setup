@@ -1,0 +1,3 @@
+mutation removeFromSocialHall($socialHallId: ID!, $userId: ID!) {
+  removeFromSocialHall(socialHallId: $socialHallId, userId: $userId)
+}

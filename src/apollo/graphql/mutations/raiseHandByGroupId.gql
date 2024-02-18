@@ -1,0 +1,9 @@
+mutation raiseHandByGroupId($groupId: ID!) {
+  raiseHandByGroupId(groupId: $groupId) {
+    _id
+    name
+    socialHallId
+    speakers
+    hosts
+  }
+}

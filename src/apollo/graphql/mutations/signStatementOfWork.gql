@@ -1,0 +1,3 @@
+mutation SignStatementOfWork($id: ID!) {
+  signSow(documentId: $id)
+}

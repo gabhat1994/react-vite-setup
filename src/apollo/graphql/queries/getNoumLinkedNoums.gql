@@ -1,0 +1,15 @@
+query getNoumLinkedNoums($noumId: ID!, $limit: Int, $offset: Int) {
+  getNoumLinkedNoums(noumId: $noumId, limit: $limit, offset: $offset) {
+    data {
+      _id
+      name
+      title
+      profileImage
+      category {
+        _id
+        name
+      }
+    }
+    count
+  }
+}

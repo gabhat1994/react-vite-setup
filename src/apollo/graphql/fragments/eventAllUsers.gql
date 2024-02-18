@@ -1,0 +1,6 @@
+fragment EventAllUsers on UserOutputAllUsers {
+  count
+  data {
+    ...EventUserOutput
+  }
+}

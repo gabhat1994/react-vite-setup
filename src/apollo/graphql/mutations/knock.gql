@@ -1,0 +1,12 @@
+mutation knock($hallAttendeeId: ID, $groupId: ID, $knockMessage: String) {
+  knock(
+    input: {
+      hallAttendeeId: $hallAttendeeId
+      groupId: $groupId
+      knockMessage: $knockMessage
+    }
+  ) {
+    _id
+    groupId
+  }
+}

@@ -1,0 +1,2 @@
+import{c as t}from"./countries-4aa86a38.js";function r(e){return e&&t.find(n=>n.iso2===e)||null}function i(e){return e.title?[e.title,e.companyName].filter(Boolean).join(" @ "):""}function a(e){return[e.companyName,e.displayName].filter(Boolean).join(", ")}function l(e){var o;return[[e.apartmentNo,e.street].filter(Boolean).join(" "),e.city,e.state,e.zipCode,(o=r(e.country))==null?void 0:o.name].filter(Boolean).join(", ")}const s={formatCompanyAndTitle:i,formatCompanyAndName:a,formatAddress:l};export{s as C,r as g};
+//# sourceMappingURL=contactDetails-4902172b.js.map

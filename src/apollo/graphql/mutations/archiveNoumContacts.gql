@@ -1,0 +1,5 @@
+mutation archiveNoumContacts(
+  $contactIDs: [ID!]!
+) {
+  archiveNoumContacts(contactIDs: $contactIDs)
+}

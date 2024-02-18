@@ -1,0 +1,27 @@
+query getNoumConnectionsKPIs(
+  $noumId: ID!
+  $from: ISODate
+  $to: ISODate
+  $granularity: NoumKPIGranularity
+) {
+  getNoumConnectionsKPIs(
+    noumId: $noumId
+    from: $from
+    to: $to
+    granularity: $granularity
+  ) {
+    kpi {
+      connected
+      disconnected
+      currentConnections
+    }
+    series {
+      date
+      values {
+        connected
+        disconnected
+        currentConnections
+      }
+    }
+  }
+}

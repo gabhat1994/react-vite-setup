@@ -1,0 +1,3 @@
+fragment UserOutputVisibilityTo on UserOutputVisibilityTo {
+  userid
+}

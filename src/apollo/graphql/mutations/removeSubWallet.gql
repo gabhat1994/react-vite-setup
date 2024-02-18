@@ -1,0 +1,5 @@
+mutation removeSubWallet($chamberId: String!) {
+  removeSubWallet(chamberId: $chamberId) {
+   message
+  }
+}

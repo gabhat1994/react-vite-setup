@@ -1,0 +1,36 @@
+mutation createProjectChamber($input: ProjectChamberInput) {
+  createProjectChamber(input: $input) {
+    _id
+    name
+    title
+    description
+    profileImage
+    status
+    type
+    projectType
+    permission
+    followersCount
+    isFollowing
+    isConnected
+    connectionsCount
+    connectionId
+    category {
+      _id
+      name
+    }
+    elements {
+      _id
+      elementType
+    }
+    networks {
+      _id
+    }
+    uid {
+      _id
+      firstName
+      middleName
+      lastName
+      location
+    }
+  }
+}

@@ -1,0 +1,63 @@
+fragment SettingsForSubscription on SubSettingOutput {
+  plan_setting_id
+  description
+  menuItems {
+    ...SettingItem
+  }
+  noumSetting {
+    ...NoumSetting
+  }
+  financialProducts {
+    ...SettingItem
+  }
+  learningProducts {
+    ...SettingItem
+  }
+}
+
+fragment Subscription on SubscriptionOutput {
+  status
+  activated_at
+  billing_period
+  billing_cycles
+  next_billing_at
+  current_term_start
+  current_term_end
+  subscription_id
+  billing_period_unit
+  plan_id
+  uid
+  plan_name
+  plan_type
+  valid_till
+  plan_category
+  plan_price
+  settings {
+    ...SettingsForSubscription
+  }
+  counters {
+    noumSetup {
+      current
+      limit
+    }
+  }
+}
+
+fragment SubscriptionInvoices on InvoiceDetail {
+  external_invoice_id
+  invoice_id
+  plan_name
+  issue_date
+  first_invoice
+  amount_paid
+  plan_type
+  payment_method
+  payment_method_details
+  status
+  total
+}
+
+fragment SubscriptionAfterCreatePlan on SubscriptionOutput {
+  subscription_id
+  status
+}

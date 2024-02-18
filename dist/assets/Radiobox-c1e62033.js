@@ -1,0 +1,2 @@
+import{c as l,j as o,fw as n,fx as s,fy as c}from"./index-cd84bcc9.js";const x=({isChecked:a,icon:e,text:i="",disableClick:r,onChange:t=()=>{}})=>l("label",{"data-test":"Radiobox-label",children:[o(n,{autoFocus:!1,type:"radio","data-testid":"radio_box_outer",onChange:()=>t(!a)}),o(s,{active:a,"aria-hidden":"true",onClick:d=>{r?d.preventDefault():t(!a)},"data-testid":"radio_box",children:e||o(c,{colorToken:a?"--icon-radiobutton-brand-primary-default":"--icon-checkbox-neutral-alt-default"})}),i]});export{x as R};
+//# sourceMappingURL=Radiobox-c1e62033.js.map

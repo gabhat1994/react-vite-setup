@@ -1,0 +1,8 @@
+fragment GlobalSearchNoumEntity on GlobalSearchNoumEntity {
+  name
+  type
+  thumbnailUrl
+  isConnected
+  isFollowing
+  status
+}

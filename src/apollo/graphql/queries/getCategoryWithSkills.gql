@@ -1,0 +1,11 @@
+query getCategoryWithSkills($limit: Int, $offset: Int, $search: String) {
+  getCategoryWithSkills(limit: $limit, offset: $offset, search: $search) {
+    _id
+    name
+    skills {
+      _id
+      icon
+      name
+    }
+  }
+}

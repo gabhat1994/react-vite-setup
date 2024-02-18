@@ -1,0 +1,3 @@
+mutation generateAiImages($prompt: String!) {
+  generateAiImages(prompt: $prompt)
+}

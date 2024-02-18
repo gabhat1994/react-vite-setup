@@ -1,0 +1,5 @@
+mutation createPassCode($input: CreatePassCodeInput!) {
+  createPassCode(input: $input) {
+    message
+  }
+}

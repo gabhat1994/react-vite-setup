@@ -1,0 +1,16 @@
+fragment NoumLayoutSection on NoumLayoutSection {
+  _id
+  type
+  position
+  columnsVerticalAlignType
+  background
+  visible
+  columns {
+    _id
+    background
+    position
+    tools {
+      ...ElementOutput
+    }
+  }
+}

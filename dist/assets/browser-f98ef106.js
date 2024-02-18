@@ -1,0 +1,2 @@
+var v=function(i,e,r,a,o,t,s,d){if(e===void 0)throw new Error("invariant requires an error message argument");if(!i){var n;if(e===void 0)n=new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var f=[r,a,o,t,s,d],u=0;n=new Error(e.replace(/%s/g,function(){return f[u++]})),n.name="Invariant Violation"}throw n.framesToPop=1,n}},l=v;export{l as b};
+//# sourceMappingURL=browser-f98ef106.js.map

@@ -1,0 +1,22 @@
+fragment Attendees on Attendees {
+  userId {
+    _id
+    firstName
+    middleName
+    lastName
+    email
+    title
+    profile {
+      profilePicture
+      profilePictureThumbnail
+    }
+    userStatus
+    chamber {
+      userId
+      _id
+    }
+  }
+  userRole
+  invitationId
+  invitationStatus
+}

@@ -1,0 +1,3 @@
+mutation deleteNoumFile($fileId: ID!) {
+  deleteNoumFile(fileId: $fileId)
+}

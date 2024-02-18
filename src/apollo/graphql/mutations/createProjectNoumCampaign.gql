@@ -1,0 +1,19 @@
+mutation createProjectNoumCampaign(
+  $spaceId: ID!
+  $targets: [CampaignAudienceTarget!]!
+) {
+  createProjectNoumCampaign(spaceId: $spaceId, targets: $targets) {
+    _id
+    uid {
+      _id
+    }
+    space {
+      _id
+      name
+    }
+    targets
+    startedAt
+    refreshedAt
+    finishedAt
+  }
+}

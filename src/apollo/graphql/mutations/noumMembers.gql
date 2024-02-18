@@ -1,0 +1,52 @@
+mutation InviteNoumMembers($input: InviteNoumMembers!) {
+  inviteNoumMembers(input: $input)
+}
+
+mutation InviteNewNonNoumenaMember($input: InviteNonNoumenaMemberInput!) {
+  inviteNewNonNoumenaMember(input: $input)
+}
+
+mutation ChangeNoumMembersRole($input: ChangeNoumMemberRoleInput!) {
+  changeNoumMembersRole(input: $input)
+}
+
+mutation KickNoumMembers($memberIDs: [ID!]!) {
+  kickNoumMembers(memberIDs: $memberIDs)
+}
+
+mutation CancelNoumInvitation($memberId: ID!) {
+  cancelNoumInvitation(memberId: $memberId)
+}
+
+mutation ApproveNoumInvitation($noumId: ID!) {
+  approveNoumInvitation(noumId: $noumId)
+}
+mutation RejectNoumInvitation($noumId: ID!) {
+  rejectNoumInvitation(noumId: $noumId)
+}
+
+mutation ApproveConnectionRequest($connectionRequestId: ID!) {
+  approveConnectionRequest(connectionRequestId: $connectionRequestId)
+}
+mutation RejectConnectionRequest($connectionRequestId: ID!) {
+  rejectConnectionRequest(connectionRequestId: $connectionRequestId)
+}
+
+mutation cancelNoumMemberRolePromotion($memberId: ID!) {
+  cancelNoumMemberRolePromotion(memberId: $memberId)
+}
+
+mutation leaveNoumMembership($noumId: ID!) {
+  leaveNoumMembership(noumId: $noumId)
+}
+
+mutation connectToNoum($noumId: ID!, $userHomeNoumId: ID!) {
+  connectToNoum(noumId: $noumId) {
+    _id
+    ...NoumUserConnectionState
+  }
+}
+
+mutation cancelConnectionRequestToNoum($noumId: ID!) {
+  cancelConnectionRequestToNoum(noumId: $noumId)
+}

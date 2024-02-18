@@ -1,0 +1,5 @@
+mutation duplicateInvoice($invoiceId: ID!) {
+  duplicateInvoice(invoiceId: $invoiceId) {
+    ...InvoiceOutput
+  }
+}

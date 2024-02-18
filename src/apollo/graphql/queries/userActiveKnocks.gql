@@ -1,0 +1,24 @@
+query userActiveKnocks($socialHallId: ID) {
+  userActiveKnocks(socialHallId: $socialHallId) {
+    count
+    data {
+      _id
+      createdAt
+      knockStatus
+      knockMessage
+      knockerUserId
+      receiverUserId
+      knockerUser {
+        _id
+        firstName
+        lastName
+        title
+        userStatus
+        profile {
+          profilePicture
+          profilePictureThumbnail
+        }
+      }
+    }
+  }
+}

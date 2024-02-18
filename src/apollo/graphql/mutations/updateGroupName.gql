@@ -1,0 +1,6 @@
+mutation changeGroupName($input: SocialGroupInput, $groupId: ID!) {
+  updateGroupName(groupId: $groupId, input: $input) {
+    _id
+    name
+  }
+}

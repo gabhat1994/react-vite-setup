@@ -1,0 +1,18 @@
+query GetLinkedSOWs(
+  $contractId: ID!
+  $filter: GetLinkedSOWsFilter
+  $limit: Int = 100
+  $offset: Int = 0
+) {
+  getLinkedSOWs(
+    contractId: $contractId
+    filter: $filter
+    limit: $limit
+    offset: $offset
+  ) {
+    count
+    data {
+      ...SOWBasic
+    }
+  }
+}

@@ -1,0 +1,23 @@
+query notifications($limit: Int, $offset: Int, $filter: NotificationFilter) {
+  notifications(limit: $limit, offset: $offset, filter: $filter) {
+    count
+    unreadCount
+    data {
+      ...Notification
+    }
+  }
+}
+query unreadNotificationsCount(
+  $limit: Int
+  $offset: Int
+  $filter: NotificationFilter
+) {
+  unreadNotifications: notifications(
+    limit: $limit
+    offset: $offset
+    filter: $filter
+  ) {
+    unreadCount
+    unviewedCount
+  }
+}

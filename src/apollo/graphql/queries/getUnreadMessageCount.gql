@@ -1,0 +1,3 @@
+query getUnreadMessageCount {
+  getUnreadMessageCount
+}

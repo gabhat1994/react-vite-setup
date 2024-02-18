@@ -1,0 +1,15 @@
+query GetHomeSpaceConversations(
+  $uid: ID
+  $spaceId: ID
+  $limit: Int
+  $offset: Int
+) {
+  getHomeSpaceConversations(
+    uid: $uid
+    spaceId: $spaceId
+    limit: $limit
+    offset: $offset
+  ) {
+    ...HomeSpaceConversationOutput
+  }
+}

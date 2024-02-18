@@ -1,0 +1,35 @@
+query globalSearch(
+  $query: String
+  $limit: Int
+  $offset: Int
+  $entityType: EntityType
+  $excludeEntityTypes: [EntityType]
+  $userStatuses: [GlobalSearchUserEntityStatus!]
+) {
+  globalSearch(
+    query: $query
+    offset: $offset
+    limit: $limit
+    entityType: $entityType
+    excludeEntityTypes: $excludeEntityTypes
+    userStatuses: $userStatuses
+  ) {
+    count
+    data {
+      id
+      entityType
+      post {
+        ...GlobalSearchPostEntity
+      }
+      noum {
+        ...GlobalSearchNoumEntity
+      }
+      event {
+        ...GlobalSearchEventEntity
+      }
+      user {
+        ...GlobalSearchEntityUser
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+query GetNoumUserConnectionState($noumId: ID!, $userHomeNoumId: ID!) {
+  getSpaceById(id: $noumId) {
+    _id
+    ...NoumUserConnectionState
+  }
+}

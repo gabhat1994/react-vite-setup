@@ -1,0 +1,15 @@
+mutation cancelSpeakerInvitation($groupId: ID!, $invitedUserId: ID!) {
+  cancelSpeakerInvitation(groupId: $groupId, invitedUserId: $invitedUserId) {
+    _id
+    invitedAsSpeakers {
+      invitee {
+        _id
+        firstName
+      }
+      inviter {
+        _id
+        firstName
+      }
+    }
+  }
+}

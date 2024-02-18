@@ -1,0 +1,1 @@
+export { ManagerTermsAndConditionsModal } from './ManagerTermsAndConditionsModal';

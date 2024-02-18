@@ -1,0 +1,3 @@
+mutation deleteQuestion($questionId: ID!) {
+  deleteQuestion(questionId: $questionId)
+}

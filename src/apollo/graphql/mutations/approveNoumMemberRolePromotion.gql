@@ -1,0 +1,3 @@
+mutation approveNoumMemberRolePromotion($noumId: ID!) {
+  approveNoumMemberRolePromotion(noumId: $noumId)
+}

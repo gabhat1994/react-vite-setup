@@ -1,0 +1,5 @@
+mutation deleteCampaign($campaignId: ID!) {
+  deleteAdCampaign(campaignId: $campaignId) {
+    isDeleted
+  }
+}

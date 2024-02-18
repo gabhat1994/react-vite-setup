@@ -1,0 +1,11 @@
+mutation discardNoumReference($referenceId: ID!) {
+  discardNoumReference(referenceId: $referenceId) {
+    _id
+    capacity
+    experienceId
+    imageUrl
+    providerName
+    referenceText
+    status
+  }
+}

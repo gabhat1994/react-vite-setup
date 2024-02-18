@@ -1,0 +1,6 @@
+mutation updateQuestion($questionId: ID!, $input: QuestionUpdateInput) {
+  updateQuestion(questionId: $questionId, input: $input) {
+    body
+    expiryDate
+  }
+}

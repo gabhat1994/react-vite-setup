@@ -1,0 +1,21 @@
+query EventAllFavoriteMembers(
+  $filter: SearchUserFilter
+  $search: String
+  $chamberId: ID
+  $favoritesLimit: Int
+  $favoritesOffset: Int
+  $type: UserRelationType
+  $oldConnectionFlow: Boolean
+) {
+  favorites: allUsers(
+    search: $search
+    chamberId: $chamberId
+    limit: $favoritesLimit
+    offset: $favoritesOffset
+    filter: $filter
+    type: $type
+    oldConnectionFlow: $oldConnectionFlow
+  ) {
+    ...EventAllUsers
+  }
+}

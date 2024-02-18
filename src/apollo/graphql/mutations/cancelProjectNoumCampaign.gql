@@ -1,0 +1,6 @@
+mutation cancelProjectNoumCampaign($campaignId: ID!) {
+  cancelProjectNoumCampaign(campaignId: $campaignId) {
+    _id
+    status
+  }
+}

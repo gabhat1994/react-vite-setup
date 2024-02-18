@@ -1,0 +1,10 @@
+fragment GlobalSearchEntityUser on GlobalSearchEntityUser {
+  id
+  name
+  title
+  thumbnailUrl
+  status
+  isNoumenaEmployee
+  firstName
+  lastName
+}

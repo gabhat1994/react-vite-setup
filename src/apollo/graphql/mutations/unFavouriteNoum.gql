@@ -1,0 +1,3 @@
+mutation unfavouriteNoum($noumId: ID!) {
+  unfavouriteNoum(noumId: $noumId)
+}

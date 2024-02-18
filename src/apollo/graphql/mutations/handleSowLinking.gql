@@ -1,0 +1,5 @@
+mutation HandleSOWLinking($contractId: ID!, $sowId: ID!, $link: Boolean!) {
+  handleSOWLinking(contractId: $contractId, sowId: $sowId, link: $link) {
+    ...SOWBasic
+  }
+}

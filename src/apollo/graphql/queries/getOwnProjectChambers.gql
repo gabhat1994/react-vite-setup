@@ -1,0 +1,18 @@
+query getOwnProjectChambers(
+  $limit: Int!
+  $offset: Int!
+  $filter: ProjectChamberFilter
+  $sort: SortType
+) {
+  getOwnProjectChambers(
+    limit: $limit
+    offset: $offset
+    filter: $filter
+    sort: $sort
+  ) {
+    data {
+      ...SpaceForList
+    }
+    count
+  }
+}

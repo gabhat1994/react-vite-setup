@@ -1,0 +1,6 @@
+fragment GlobalPlanSettings on SettingsOutput {
+  settings_id
+  setting_name
+  setting_value_type
+  setting_value
+}

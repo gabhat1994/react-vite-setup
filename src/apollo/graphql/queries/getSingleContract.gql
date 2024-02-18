@@ -1,0 +1,5 @@
+query GetSingleContract($id: ID!) {
+  getSingleContract(_id: $id) {
+    ...Contract
+  }
+}

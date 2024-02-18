@@ -1,0 +1,55 @@
+fragment InvoiceOutput on InvoiceOutput {
+  id
+  noumId {
+    _id
+    name
+    uid {
+      _id
+    }
+    profileImage
+    projectType
+  }
+  invoiceNumber
+  invoiceFrom {
+    ...NoumContact
+  }
+  invoiceTo {
+    ...NoumContact
+  }
+  issueDate
+  dueDate
+  currency
+  amount
+  duplicatedFromInvoiceId
+  duplicatedFromInvoiceNumber
+  summary
+  type
+  notes
+  paymentTerms
+  paymentDetails
+  lateFeeType
+  lateFeeValue
+  logoUrl
+  status
+  invoiceURL
+  lineItems {
+    id
+    description
+    quantity
+    unitPrice
+    taxRate
+    taxLabel
+    currency
+    amount
+  }
+  taxLine {
+    id
+    description
+    taxCode
+    currency
+    amount
+  }
+  createdBy {
+    _id
+  }
+}

@@ -1,0 +1,14 @@
+mutation updateNoumReference(
+  $referenceId: ID!
+  $payload: UpdateNoumReferencePayload!
+) {
+  updateNoumReference(referenceId: $referenceId, payload: $payload) {
+    _id
+    capacity
+    experienceId
+    imageUrl
+    providerName
+    referenceText
+    status
+  }
+}

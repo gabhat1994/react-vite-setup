@@ -1,0 +1,6 @@
+query getContactConnectionWithNoum($noumId: ID!, $contactId: ID!) {
+  getContactConnectionWithNoum(noumId: $noumId, contactId: $contactId) {
+    _id
+    status
+  }
+}

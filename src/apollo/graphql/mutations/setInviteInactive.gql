@@ -1,0 +1,3 @@
+mutation setInviteInactive($token: String!) {
+  setInviteInactive(token: $token)
+}
